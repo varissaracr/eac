@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="./assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="./assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <!-- Template Main CSS File -->
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/fontawesome/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <title>ระบบรายงานข้อมูลน้ำผิวดิน</title>
+
+    <!-- Favicons -->
+    <link href="./../assets/img/favicon.png" rel="icon">
+    <link href="./../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+</head>
+
+<body>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="./../main_eac/index.html"><i class="fas fa-home"></i>
+                        <span>หน้าหลัก</span></a></li>
+                <li><a href="./../form_demo/dashboard/index.html"><i class="fas fa-bacon"></i>
+                        <span>ความมั่นทางอาหาร</span></a>
+                </li>
+                <li class="active"><a href="./../db_water/index.html"><i class="fas fa-chart-line"></i>
+                        <span>รายงานข้อมูลน้ำผิวดิน</span></a></li>
+                <li><a href="./../form_organizeV2/report/index.html"><i class="fas fa-users-cog"></i>
+                        <span>กลุ่มเครือข่าย/องค์กร</span></a></li>
+                <!-- <li><a href="#map_eac"><i class="bx bx-layer"></i> <span>ระบบสารสนเทศภูมิศาสตร์เพื่อชุมชน</span></a> -->
+                <li><a href="./../dashboard_wms/report/index.html"><i class="fas fa-layer-group"></i>
+                        <span>แผนที่ภาพรวม</span></a></li>
+                </li>
+                <li><a href="./../form_travel/dashboard/index.html"><i class="fas fa-suitcase"></i>
+                        <span>ท่องเที่ยวชุมชน</span></a></li>
+                </li>
+                <li><a href="./../form_notify/dashboard/index.html"><i class="fas fa-bullhorn"></i>
+                        <span>แจ้งปัญหาสิ่งแวดล้อม</span></a></li>
+                </li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </header><!-- End Header -->
+    <main id="main">
+        <section id="services" class="services">
+            <div class="container w-100 mw-100">
+                <div class="section-title">
+                    <h2>ระบบรายงานข้อมูลน้ำผิวดิน</h2>
+                    <p> เป็นระบบที่รวบรวมข้อมูลน้ำผิวดิน
+                        ภายใต้เครือข่ายศูนย์ข้อมูลสารสนเทศชุมชนภาคตะวันออก (สชอ.)
+                    </p>
+                </div>
+
+                <div class="card-container p-4">
+                    <div class="container-fluid">
+                        <h5>ตำแหน่งตรวจวัดคุณภาพน้ำและระดับน้ำผิวดินอัตโนมัติ</h5>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="card border border-radius"
+                            style=" box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;"
+                            id="map">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="accordion-header" id="headingOne">
+                        <div class="container-fluid" style="margin-top: 10px;">
+                            <div id="headingOne" style="margin-top: 10px;">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link w-100 mw-100 hi-50"
+                                        style="box-shadow: 0 6px 10px -4px rgb(0 0 0 / 15%);" id="H1_op"
+                                        onclick="H1_open()">
+                                        <h5 class="font-weight-bold" style="margin-top: 10px; color: #1e88e5;">
+                                            ข้อมูลคุณภาพน้ำผิวดิน
+                                            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                        </h5>
+                                    </button>
+                                    <button class="btn btn-link w-100 mw-100 hi-50"
+                                        style="box-shadow: 0 6px 10px -4px rgb(0 0 0 / 15%); background-color: #e3f2fd;"
+                                        id="H1_close" onclick="H1_close()">
+                                        <h5 class="font-weight-bold" style="margin-top: 10px; color: #1976d2">
+                                            ข้อมูลคุณภาพน้ำผิวดิน <i class="fa fa-angle-double-down"
+                                                aria-hidden="true"></i>
+                                        </h5>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="box-shadow mt-30">
+                                        <div class="form-group">
+                                            <select class="form-control" id="sta" required>
+                                                <option value="">คลิกเลือกสถานีตรวจวัดที่ต้องการ</option>
+                                                <option value="station_01">สถานีตรวจวัดที่ 1</option>
+                                                <option value="station_02">สถานีตรวจวัดที่ 2</option>
+                                                <option value="station_03">สถานีตรวจวัดที่ 3
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="container-fluid" style="text-align: center">
+                                        <h5>ข้อมูลคุณภาพน้ำปัจจุบัน ณ ตำแหน่งตรวจวัดคุณภาพน้ำอัตโนมัติ </h5>
+                                        <span id="info_sta"></span>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="d-flex justify-content-end flex-row">
+                                             <span id="location"></span>&nbsp;
+                                             <span id="info_table"></span> 
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <br>
+                                    
+                                    <div class="row justify-content-md-center">
+                                        <div class="col-sm-3">
+                                            <div class="border-radius box-shadow">
+                                                <br>
+                                                <div class="container-fluid" style="text-align: center;">
+                                                    <img src="./marker/ec3.png" width="50px">
+                                                </div>
+                                                <div class="container-fluid p2">
+                                                    การนำไฟฟ้า (EC)
+                                                </div>
+                                                <div class="container-fluid"
+                                                    style="text-align: center; font-size: 38px;" id="ec">
+                                                </div>
+                                                <div class="container-fluid p1" style="text-align: center; ">
+                                                    <p1> mS/cm </p1>
+                                                </div>
+                                                <br>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class=" border-radius box-shadow">
+                                                <br>
+                                                <div class="container-fluid" style="text-align: center;">
+                                                    <img src="./marker/do2.png" width="50px">
+                                                </div>
+                                                <div class="container-fluid p2">
+                                                    ออกซิเจนละลายน้ำ (DO)
+                                                </div>
+                                                <div class="container-fluid"
+                                                    style="text-align: center; font-size: 38px;" id="do">
+                                                </div>
+                                                <div class="container-fluid p1" style="text-align: center;">
+                                                    <p1> mg/L </p1>
+                                                </div>
+                                                <br>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="border-radius box-shadow ">
+                                                <br>
+                                                <div class="container-fluid" style="text-align: center;">
+                                                    <img src="./marker/temp3.png" width="50px">
+                                                </div>
+                                                <div class="container-fluid p2">
+                                                    อุณหภูมิ (Temp)
+                                                </div>
+                                                <div class="container-fluid"
+                                                    style="text-align: center; font-size: 38px;" id="tmp">
+                                                </div>
+                                                <div class="container-fluid p1" style="text-align: center;">
+                                                    <p1> °C </p1>
+                                                </div>
+                                                <br>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="border-radius box-shadow">
+                                                <br>
+                                                <div class="container-fluid" style="text-align: center;">
+                                                    <img src="./marker/ph2.png" width="50px">
+                                                </div>
+                                                <div class="container-fluid p2">
+                                                    ค่าความเป็นกรด-ด่าง (pH)
+                                                </div>
+                                                <div class="container-fluid"
+                                                    style="text-align: center; font-size: 38px;" id="ph">
+                                                </div>
+                                                <div class="container-fluid p1" style="text-align: center;">
+                                                    <p1> pH </p1>
+                                                </div>
+                                                <br>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- <div class="station_03"> -->
+                                    <div class="row mt-30 ml-auto">
+                                        <div class="col-sm-6">
+                                            <div class="container-fluid">
+                                                <h5>กราฟแสดงผลข้อมูลย้อนหลัง </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-30">
+                                        <div class="col-sm-6">
+                                            <div class="border-radius box-shadow">
+                                                <br>
+                                                <div class="container-fluid ml-30 p4">
+                                                    <label> การนำไฟฟ้า (EC)</label>
+                                                </div>
+                                                <br>
+                                                <div class="chart-body chart" id="ecchart"></div>
+                                                <br>
+                                                <div class="container-fluid ml-30 p1">
+                                                    <p1> หมายเหตุ: ไม่กำหนดเกณฑ์มาตรฐาน </p1>
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="border-radius box-shadow">
+                                                <br>
+                                                <div class="container-fluid ml-30 p4">
+                                                    <label> ออกซิเจนละลายน้ำ (DO) </label>
+                                                </div>
+                                                <br>
+                                                <div class="chart-body chart" id="dochart"></div>
+                                                <br>
+                                                <div class="container-fluid ml-30 p1">
+                                                    <p1> หมายเหตุ: สีแดง หมายถึง ค่าที่น้อยกว่า 2.0 mg/L </p1>
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-30 ">
+                                        <div class="col-sm-6">
+                                            <div class="border-radius box-shadow">
+                                                <br>
+                                                <div class="container-fluid ml-30 p4">
+                                                    <label> อุณหภูมิ (Temp)</label>
+                                                </div>
+                                                <br>
+                                                <div class="chart-body chart" id="tmpchart"></div>
+                                                <br>
+                                                <div class="container-fluid ml-30 p1">
+                                                    <p1> หมายเหตุ: สีแดง หมายถึง ค่าอุณหภูมิสูงเกิน อุณหภูมิตามธรรมชาติ
+                                                        3
+                                                        องศาเซลเซียส </p1>
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="border-radius box-shadow">
+                                                <br>
+                                                <div class="container-fluid ml-30 p4">
+                                                    <label> ความเป็นกรด-ด่าง (pH)
+                                                    </label>
+                                                </div>
+                                                <br>
+                                                <div class="chart-body chart" id="phchart"></div>
+                                                <br>
+                                                <div class="container-fluid ml-30 p1">
+                                                    <p1> หมายเหตุ: สีแดง หมายถึง ค่า pH ที่ไม่อยู่ในช่วงระหว่าง 5 - 9
+                                                    </p1>
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-30 ml-auto">
+                                    <div class="col-sm-6">
+                                        <h6><b>แหล่งที่มาของข้อมูล:</b>&nbsp;กรมควบคุมมลพิษ
+                                            อ้างอิงจากเกณฑ์ของดัชนีคุณภาพน้ำของประเทศไทย <a
+                                                href="https://www.pcd.go.th/laws/%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%81%e0%b8%b2%e0%b8%a8%e0%b8%84%e0%b8%93%e0%b8%b0%e0%b8%81%e0%b8%a3%e0%b8%a3%e0%b8%a1%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%aa%e0%b8%b4%e0%b9%88%e0%b8%87%e0%b9%81-19/">
+                                                กรมควบคุมมลพิษ</a></h6>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-header" id="headingThree">
+                            <div class="container-fluid" style="margin-top: 10px;">
+                                <div id="headingThree" style="margin-top: 10px;">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link w-100 mw-100 m-auto"
+                                            style="box-shadow: 0 6px 10px -4px rgb(0 0 0 / 15%); margin-top: 10px;"
+                                            id="H2_op" onclick="H2_open()">
+                                            <h5 class="font-weight-bold" style="margin-top: 10px; color:#00bcd4">
+                                                ข้อมูลระดับน้ำผิวดิน
+                                                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                                            </h5>
+                                        </button>
+                                        <button class="btn btn-link w-100 mw-100 m-auto"
+                                            style="box-shadow: 0 6px 10px -4px rgb(0 0 0 / 15%); margin-top: 10px; background-color: #e0f7fa;"
+                                            id="H2_close" onclick="H2_close()">
+                                            <h5 class="font-weight-bold" style="margin-top: 10px; color: #0097a7">
+                                                ข้อมูลระดับน้ำผิวดิน
+                                                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                                            </h5>
+                                        </button>
+                                    </h5>
+                                </div>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="mt-30 box-shadow">
+                                            <div class="form-group">
+                                                <select class="form-control" id="stname" required>
+                                                    <option value="">คลิกเลือกสถานีตรวจวัดที่ต้องการ</option>
+                                                    <option value="station_01">สถานีตรวจวัดที่ 1</option>
+                                                    <option value="station_02">สถานีตรวจวัดที่ 2</option>
+                                                    <option value="station_03">สถานีตรวจวัดที่ 3</option>
+                                                    <option value="station_04">สถานีตรวจวัดที่ 4</option>
+                                                    <option value="station_05">สถานีตรวจวัดที่ 5</option>
+                                                    <option value="station_06">สถานีตรวจวัดที่ 6</option>
+                                                    <option value="station_07">สถานีตรวจวัดที่ 7</option>
+                                                    <option value="station_08">สถานีตรวจวัดที่ 8</option>
+                                                    <option value="station_09">สถานีตรวจวัดที่ 9</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="container-fluid" style="text-align: center;">
+                                            <br>
+                                            <h5>ข้อมูลระดับน้ำปัจจุบัน ณ ตำแหน่งตรวจวัดระดับน้ำผิวดิน </h5>
+                                            <span id="info_sta2"></span>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="d-flex justify-content-end flex-row">
+                                                 <span id="info_table2"></span>
+                                            </div>
+                                        </div>
+
+                                        <br>
+                                        <div class="row justify-content-md-center">
+                                            <div class="col-sm">
+                                                <div class="border-radius box-shadow">
+                                                    <br>
+                                                    <div class="container-fluid" style="text-align: center;">
+                                                        <img src="./marker/wl.png" width="50px">
+                                                    </div>
+                                                    <div class="container-fluid p2">
+                                                        ระดับน้ำผิวดิน (Water level)
+                                                    </div>
+                                                    <div class="container-fluid"
+                                                        style="text-align: center; font-size: 38px;" id="deep">
+                                                    </div>
+                                                    <div class="container-fluid p1" style="text-align: center; ">
+                                                        <p1> cm </p1>
+                                                    </div>
+                                                    <br>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm">
+                                                <div class="border-radius box-shadow">
+                                                    <br>
+                                                    <div class="container-fluid" style="text-align: center;">
+                                                        <img src="./marker/temp2.png" width="50px">
+                                                    </div>
+                                                    <div class="container-fluid p2">
+                                                        อุณหภูมิ (Temp)
+                                                    </div>
+                                                    <div class="container-fluid"
+                                                        style="text-align: center; font-size: 38px;" id="temp1">
+                                                    </div>
+                                                    <div class="container-fluid p1" style="text-align: center; ">
+                                                        <p1> °C </p1>
+                                                    </div>
+                                                    <br>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm">
+                                                <div class="border-radius box-shadow">
+                                                    <br>
+                                                    <div class="container-fluid" style="text-align: center;">
+                                                        <img src="./marker/humi.png" width="50px">
+                                                    </div>
+                                                    <div class="container-fluid p2">
+                                                        ความชื้น (Humidity)
+                                                    </div>
+                                                    <div class="container-fluid"
+                                                        style="text-align: center; font-size: 38px;" id="humi1">
+                                                    </div>
+                                                    <div class="container-fluid p1" style="text-align: center; ">
+                                                        <p1> % </p1>
+                                                    </div>
+                                                    <br>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container-fluid mt-30">
+                                            <h5>กราฟแสดงผลข้อมูลย้อนหลัง </h5>
+                                        </div>
+                                        <div class="row mt-30 ">
+                                            <div class="col-sm-6">
+                                                <div class="border-radius box-shadow">
+                                                    <br>
+                                                    <div class="container-fluid ml-30 p4">
+                                                        <label> ระดับน้ำ (Wl)</label>
+                                                    </div>
+                                                    <div class="chart-body chart" id="deepchart"></div>
+                                                    <br>
+                                                    <div class="container-fluid ml-30 p1">
+                                                        <!-- <p1> หมายเหตุ: สีแดง หมายถึง  </p1> -->
+                                                    </div>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="border-radius box-shadow">
+                                                    <br>
+                                                    <div class="container-fluid ml-30 p4">
+                                                        <label> อุณหภูมิ (Temp)</label>
+                                                    </div>
+                                                    <div class="chart-body chart" id="tempchart"></div>
+                                                    <br>
+                                                    <div class="container-fluid ml-30 p1">
+                                                        <!-- <p1> หมายเหตุ: สีแดง หมายถึง  </p1> -->
+                                                    </div>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-30">
+                                            <div class="col-sm-6">
+                                                <div class="border-radius box-shadow">
+                                                    <br>
+                                                    <div class="container-fluid ml-30 p4">
+                                                        <label> ความชื้น (Humidity)</label>
+                                                    </div>
+                                                    <div class="chart-body chart" id="humichart"></div>
+                                                    <br>
+                                                    <div class="container-fluid ml-30 p1">
+                                                        <!-- <p1> หมายเหตุ: สีแดง หมายถึง </p1> -->
+                                                    </div>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-30 ml-auto">
+                                            <h6><b>แหล่งที่มาของข้อมูล:</b>&nbsp;กรมควบคุมมลพิษ
+                                                อ้างอิงจากเกณฑ์ของดัชนีคุณภาพน้ำของประเทศไทย <a
+                                                    href="https://www.pcd.go.th/laws/%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%81%e0%b8%b2%e0%b8%a8%e0%b8%84%e0%b8%93%e0%b8%b0%e0%b8%81%e0%b8%a3%e0%b8%a3%e0%b8%a1%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%aa%e0%b8%b4%e0%b9%88%e0%b8%87%e0%b9%81-19/">
+                                                    กรมควบคุมมลพิษ</a></h6>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!-- Resources กราฟเส้น-->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <script src="./assets/js/main.js"></script> -->
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
