@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>แผนที่ภาพรวม</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="./../../assets/img/favicon.png" rel="icon">
+    <link href="./../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- start dooklink -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&family=Kanit:ital,wght@0,100;0,300;0,400;0,500;1,400&family=Noto+Sans+Thai&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+
+    <!--line-awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Vendor CSS Files -->
+    <link href="./../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="./../../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <!-- Template Main CSS File -->
+    <link href="./../../assets/css/style.css" rel="stylesheet">
+    <link href="./../../assets/fontawesome/css/all.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./checkbox.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="./../../main_eac/index.html"><i class="fas fa-home"></i> <span>หน้าหลัก</span></a></li>
+                <li><a href="./../../form_demo/dashboard/index.html"><i class="fas fa-bacon"></i>
+                        <span>ความมั่นทางอาหาร</span></a>
+                </li>
+                <li><a href="./../../db_water/index.html"><i class="fas fa-chart-line"></i>
+                        <span>รายงานข้อมูลน้ำผิวดิน</span></a></li>
+                <li><a href="#corporate_network"><i class="fas fa-users-cog"></i>
+                        <span>กลุ่มเครือข่าย/องค์กร</span></a></li>
+                <li class="slide-right"><a href="#WMS"><i class="fas fa-layer-group"></i>
+                        <span>แผนที่ภาพรวม</span></a></li>
+                </li>
+
+                <li><a href="./../../form_travel/dashboard/index.html"><i class="fas fa-suitcase"></i>
+                        <span>ท่องเที่ยวชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../form_notify/dashboard/index.html"><i class="fas fa-bullhorn"></i>
+                        <span>แจ้งปัญหาสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"> <i class="fas fa-tree"></i>
+                        <span>ทรัพยากรธรรมชาติและสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../form_learning/dashboard/index.html"><i class="fas fa-chalkboard-teacher"></i>
+                        <span>การเรียนรู้บนฐานชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"><i class="fas fa-exclamation-circle"></i>
+                        <span>เฝ้าระวังปัญหาผลกระทบจากมลพิษสิ่งแวดล้อม</span></a></li>
+                </li>
+
+            </ul>
+        </nav>
+        <!-- .nav-menu-->
+
+    </header><!-- End Header -->
+    <tool id="tool" class="d-flex flex-column bg-warning animate__animated animate__slideInLeft animate__delay-1s"
+        style="width: 395px;">
+        <div class="d-flex justify-content-between mt-2"
+            style="box-shadow: 0px 20px 0px -20px  rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);">
+            <div class="ihome ml-3 mt-2 mb-3" onclick="window.location.href='./../../main_eac/index.html'">
+                <i class="bi bi-house-door-fill"></i>
+            </div>
+            <h4 class="m-auto">แผนที่ภาพรวม</h4>
+            <button type="button" class="close slide-left mt-2 mb-3" data-dismiss="tool" aria-label="Close">
+                <span aria-hidden="true">ปิด&nbsp;&nbsp;</span>
+            </button>
+        </div>
+        <!-- <div class="mt-3 mb-3 mr-2 ml-2" style="border-bottom: 2px solid #6E6E6E;"></div> -->
+        <div class="scrolbar-style" style="overflow: auto;">
+            <div class="container mt-2 mb-2">
+
+                <div class="card-box2 mw-100 p-2"
+                    style="width: 100%; border-radius: 15px;  
+                    box-shadow: 0px 20px 0px -20px  rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2); background:#FFF4BD;">
+                    <div class="col-sm-12">
+                        <div class="p-2 text-center">
+                            <h6><b>แผนที่ฐาน</b></h6>
+                            <div class="row pt-2">
+                                <div class="basemap-style basemap-style-active" value="ghyb">
+                                    <div class="gR3rXe m-auto"
+                                        style="background-image: url(https://maps.gstatic.com/tactile/layerswitcher/ic_satellite-1x.png);">
+                                    </div>
+                                    <span>ดาวเทียม</span>
+                                </div>
+                                <div class="basemap-style m-auto" value="CartoDB_Positron">
+                                    <div class="gR3rXe"
+                                        style="background-image: url(https://maps.gstatic.com/tactile/layerswitcher/ic_default-1x.png);">
+                                    </div>
+                                    <span>ค่าเริ่มต้น</span>
+                                </div>
+                                <!-- <div class="basemap-style m-auto">
+                                    <div class="gR3rXe"
+                                        style="background-image: url(https://maps.gstatic.com/tactile/layerswitcher/ic_terrain-1x.png);">
+                                    </div>
+                                    <span>ดาวเทียม</span>
+                                </div> -->
+                                <div class="basemap-style m-auto" value="grod">
+                                    <div class="gR3rXe"
+                                        style="background-image: url(https://maps.gstatic.com/tactile/layerswitcher/ic_traffic-1x.png);">
+                                    </div>
+                                    <span>เส้นถนน</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mb-2">
+                <div class="card-box2 mw-100 p-2"
+                    style="width: 100%; border-radius: 15px;  
+                    box-shadow: 0px 20px 0px -20px  rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2); background:#FFF4BD;">
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                        <img src="./marker-meteo/radar_black.png" width="50px" alt="radar_black">
+                        <div class="checkbox checkbox-info checkbox-circle">
+                            <input class="form-check-input" type="checkbox" value="radar" id="radar" checked>
+                            <label class="form-check-label">
+                                แสดงภาพเรดาห์น้ำฝน
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="radar-rain m-auto" onclick="radarUnit('mn_h',this)" id="dBZ">
+                        <span class="tooltiptext">คลิกเพื่อเปลี่ยนหน่วย</span>
+                        <div class="d-flex flex-row justify-content-around">
+                            <span>dBZ</span>
+                            <span>0</span>
+                            <span>20</span>
+                            <span>30</span>
+                            <span>40</span>
+                            <span>50</span>
+                            <span>60</span>
+                        </div>
+                    </div>
+                    <div class="radar-rain  m-auto" onclick="radarUnit('in_h',this)" id="mn_h">
+                        <span class="tooltiptext">คลิกเพื่อเปลี่ยนหน่วย</span>
+                        <div class="d-flex flex-row justify-content-around">
+                            <span>mn/h</span>
+                            <span>0</span>
+                            <span>0.6</span>
+                            <span>3</span>
+                            <span>12</span>
+                            <span>50</span>
+                            <span>200</span>
+                        </div>
+                    </div>
+                    <div class="radar-rain m-auto" onclick="radarUnit('dBZ',this)" id="in_h">
+                        <span class="tooltiptext">คลิกเพื่อเปลี่ยนหน่วย</span>
+                        <div class="d-flex flex-row justify-content-around">
+                            <span>in/h</span>
+                            <span>0</span>
+                            <span>0.02</span>
+                            <span>0.1</span>
+                            <span>0.5</span>
+                            <span>2</span>
+                            <span>8</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around flex-row no-gutters text-center">
+                        <div class="col-3">
+                            <span class="Noto-14">ฝนเล็กน้อย</span>
+                            <div class="row" style="margin-left: 15%;">
+                                <div class="box-color" style="background-color: #6ECCF5 ;"></div>
+                                <div class="box-color" style="background-color: #4aa8c3 ;"></div>
+                                <div class="box-color" style="background-color: #2a809e ;"></div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <span class="Noto-14">ฝนปานกลาง</span>
+                            <div class="row" style="margin-left: 15%;">
+                                <div class="box-color" style="background-color: #0f5e7f ;"></div>
+                                <div class="box-color" style="background-color: #879d47 ;"></div>
+                                <div class="box-color" style="background-color: #ffdc0f ;"></div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <span class="Noto-14">ฝนหนัก</span>
+                            <div class="row" style="margin-left: 15%;">
+                                <div class="box-color" style="background-color: #fea722 ;"></div>
+                                <div class="box-color" style="background-color: #fc7234 ;"></div>
+                                <div class="box-color" style="background-color: #fd1d1d ;"></div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <span class="Noto-14">ฝนตกหนักมาก
+                            </span>
+                            <div class="row" style="margin-left: 15%;">
+                                <div class="box-color" style="background-color: #FFAAFF ;"></div>
+                                <div class="box-color" style="background-color: #FF76FF ;"></div>
+                                <div class="box-color" style="background-color: #FE01FC ;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-header" id="headingOne">
+                <div class="container-fluid">
+                    <div id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne" id="H1_op" onclick="H1_open()">
+                                <label class="font-weight-bold" style="color: #444;">
+                                    <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>&nbsp; ข้อมูลทั่วไป
+                                </label>
+                            </button>
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne" id="H1_close" onclick="H1_close()">
+                                <label class="font-weight-bold " style="color: #0563bb;">
+                                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>&nbsp;<span
+                                        style="text-decoration:underline;">ข้อมูลทั่วไป</span>
+                                </label>
+                            </button>
+                        </h5>
+                    </div>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-box2 mw-100 m-auto" style="width: 95%; border-radius: 15px; 
+                    box-shadow: 0px 20px 0px -20px  rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);">
+                        <ul>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="lu" id="lu">
+                                <label class="form-check-label">
+                                    การใช้ประโยชน์ที่ดิน
+                                </label>
+                                <br>
+                                <img id="luLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="pro" id="pro" checked>
+                                <label class="form-check-label">
+                                    ขอบเขตจังหวัด
+                                </label>
+                                <br>
+                                <img id="proLegend">
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="amp" id="amp">
+                                <label class="form-check-label">
+                                    ขอบเขตอำเภอ
+                                </label>
+                                <br>
+                                <img id="ampLegend">
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="tam" id="tam">
+                                <label class="form-check-label">
+                                    ขอบเขตตำบล
+                                </label>
+                                <br>
+                                <img id="tamLegend">
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="mainbasin" id="mainbasin">
+                                <label class="form-check-label">
+                                    ขอบเขตลุ่มน้ำหลัก
+                                </label>
+                                <br>
+                                <img id="mainbasinLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="subbasin" id="subbasin">
+                                <label class="form-check-label">
+                                    ขอบเขตลุ่มน้ำย่อย
+                                </label>
+                                <br>
+                                <img id="subbasinLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="aqi" id="aqi">
+                                <label class="form-check-label">
+                                    จุดตรวจวัดคุณภาพอากาศ (กรมควบคุมมลพิษ)
+                                </label>
+                                <br>
+                                <img id="aqiLegend" width="30px">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="meteo" id="meteo">
+                                <label class="form-check-label">
+                                    จุดตรวจวัดสภาพอากาศ (กรมอุตุนิยมวิทยา)
+                                </label>
+                                <br>
+                                <img id="meteoLegend" width="30px">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="hotspot" id="hotspot">
+                                <label class="form-check-label">
+                                    จุดความร้อน
+                                </label>
+                                <br>
+                                <img id="hpLegend" width="30px">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="gwater" id="gwater">
+                                <label class="form-check-label">
+                                    จุดตรวจวัดคุณภาพน้ำบาดาล
+                                </label>
+                                <br>
+                                <img id="gwLegend" width="30px">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="organization" id="organization">
+                                <label class="form-check-label">
+                                    เครือข่าย/กลุ่ม/องค์กร
+                                </label>
+                                <br>
+                                <img class="mb-3" id="organizationLegend" width="30px">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="accordion-header" id="headingTwo">
+                <div class="container-fluid">
+                    <div id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="true" aria-controls="collapseTwo" id="H2_op" onclick="H2_open()">
+                                <label class="font-weight-bold" style="text-align: left; color: #444;">
+                                    <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>&nbsp;
+                                    แผนที่ฟื้นฟู-อนุรักษ์ธรรมชาติและสิ่งแวดล้อม
+                                </label>
+                            </button>
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="true" aria-controls="collapseTwo" id="H2_close" onclick="H2_close()">
+                                <label class="font-weight-bold" style="text-align: left; color: #0563bb;">
+                                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>&nbsp;<span
+                                        style="text-decoration:underline;">แผนที่ฟื้นฟู-อนุรักษ์ธรรมชาติและสิ่งแวดล้อม</span>
+
+                                </label>
+                            </button>
+                        </h5>
+                    </div>
+                </div>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-parent="#accordion">
+                    <div class="card-box2 mw-100 m-auto" style="width: 90%; border-radius: 25px; 
+              box-shadow: 0px 20px 0px -20px  rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);">
+                        <ul>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="c_forest_bl" id="c_forest_bl">
+                                <label class="form-check-label">
+                                    แปลงป่าชุมชนบ้านแลง อ.เมือง จ.ระยอง
+                                </label>
+                                <br>
+                                <img id="c_forest_blLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="plot_banamp" id="plot_banamp">
+                                <label class="form-check-label">
+                                    แปลงบ้านอำเภอ จ.ชลบุรี
+                                </label>
+                                <br>
+                                <img id="plot_banampLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="point_banamp" id="point_banamp">
+                                <label class="form-check-label">
+                                    ตำแหน่งบ้านอำเภอ
+                                </label>
+                                <br>
+                                <img id="point_banampLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="plot_khaodin" id="plot_khaodin">
+                                <label class="form-check-label">
+                                    แปลงที่ดินเขาดิน
+                                </label>
+                                <br>
+                                <img id="plot_khaodinLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="point_khaodin"
+                                    id="point_khaodin">
+                                <label class="form-check-label">
+                                    ตำแหน่งเขาดิน รักถิ่นเดิม
+                                </label>
+                                <br>
+                                <img id="point_khaodinLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="draftlink_ne_e"
+                                    id="draftlink_ne_e">
+                                <label class="form-check-label">
+                                    ร่างแผนเชื่อมป่าภาคอีสานกับภาคตะวันออก 2564
+                                </label>
+                                <br>
+                                <img id="draftlink_ne_eLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="comforest_eac"
+                                    id="comforest_eac">
+                                <label class="form-check-label">
+                                    ป่าชุมชน
+                                </label>
+                                <br>
+                                <img id="comforest_eacLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ff_conser" id="ff_conser">
+                                <label class="form-check-label">
+                                    ป่าครอบครัว
+                                </label>
+                                <br>
+                                <img id="ff_conserLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="banna_plants" id="banna_plants">
+                                <label class="form-check-label">
+                                    บ้านนาอีสาน แหล่งพันธุ์กล้าป่า
+                                </label>
+                                <br>
+                                <img class="mb-3" id="banna_plantsLegend">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-header" id="headingThree">
+                <div class="container-fluid">
+                    <div id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="true" aria-controls="collapseThree" id="H3_op" onclick="H3_open()">
+                                <label class="font-weight-bold" style=" color: #444;">
+                                    <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>&nbsp;
+                                    ตะวันออกวิถีแห่งความสุข
+                                </label>
+                            </button>
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="true" aria-controls="collapseThree" id="H3_close" onclick="H3_close()">
+                                <label class="font-weight-bold" style="color: #0563bb;">
+                                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>&nbsp;
+                                    <span style="text-decoration:underline;">ตะวันออกวิถีแห่งความสุข</span>
+                                </label>
+                            </button>
+                        </h5>
+                    </div>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-box2 mw-100 m-auto" style="width: 90%; border-radius: 25px; 
+                box-shadow: 0px 20px 0px -20px  rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);">
+                        <ul>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="conser_area" id="conser_area">
+                                <label class="form-check-label">
+                                    พื้นที่การฟื้นฟูและอนุรักษ์ธรรมชาติ
+                                </label>
+                                <br>
+                                <img id="conser_areaLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="driving_commu"
+                                    id="driving_commu">
+                                <label class="form-check-label">
+                                    การขับเคลื่อนชุมชนน่าอยู่
+                                </label>
+                                <br>
+                                <img id="driving_commuLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="commu_learning"
+                                    id="commu_learning">
+                                <label class="form-check-label">
+                                    พื้นที่การเรียนรู้บนฐานชุมชน
+                                </label>
+                                <br>
+                                <img id="commu_learningLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="commu_touri" id="commu_touri">
+                                <label class="form-check-label">
+                                    พื้นที่จัดการท่องเที่ยวชุมชน
+                                </label>
+                                <br>
+                                <img id="commu_touriLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="food_cco" id="food_cco">
+                                <label class="form-check-label">
+                                    อาหารปลอดภัย จ.ฉะเชิงเทรา
+                                </label>
+                                <br>
+                                <img id="food_ccoLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="food_pcb" id="food_pcb">
+                                <label class="form-check-label">
+                                    อาหารปลอดภัย จ.ปราจีนบุรี
+                                </label>
+                                <br>
+                                <img id="food_pcbLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="food_ryg" id="food_ryg">
+                                <label class="form-check-label">
+                                    อาหารปลอดภัย จ.ระยอง
+                                </label>
+                                <br>
+                                <img id="food_rygLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="familyforest" id="familyforest">
+                                <label class="form-check-label">
+                                    ป่าครอบครัว
+                                </label>
+                                <br>
+                                <img id="familyforestLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="media" id="media">
+                                <label class="form-check-label">
+                                    เรื่องราวจากสื่อ
+                                </label>
+                                <br>
+                                <img class="mb-3" id="mediaLegend">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-header" id="headingfour">
+                <div class="container-fluid">
+                    <div id="headingfour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapsefour"
+                                aria-expanded="true" aria-controls="collapsefour" id="H4_op" onclick="H4_open()">
+                                <label class="font-weight-bold" style="color: #444;">
+                                    <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>&nbsp; แผนที่แหล่งน้ำ
+                                    (เขาสิบห้าชั้น)
+                                </label>
+                            </button>
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapsefour"
+                                aria-expanded="true" aria-controls="collapsefour" id="H4_close" onclick="H4_close()">
+                                <label class="font-weight-bold" style="color: #0563bb;">
+                                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>&nbsp;
+                                    <span style="text-decoration:underline;">แผนที่แหล่งน้ำ (เขาสิบห้าชั้น)</span>
+                                </label>
+                            </button>
+                        </h5>
+                    </div>
+                </div>
+                <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
+                    <div class="card-box2 mw-100 m-auto" style="width: 90%; border-radius: 25px; 
+                box-shadow: 0px 20px 0px -20px  rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);">
+                        <ul>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="k_wtn_pb" id="k_wtn_pb">
+                                <label class="form-check-label">
+                                    คลองวังโตนด คลองพรานบุญ
+                                </label>
+                                <br>
+                                <img id="k_wtn_pbLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="plot_wtn_reserv"
+                                    id="plot_wtn_reserv">
+                                <label class="form-check-label">
+                                    แปลงอ่างวังโตนด
+                                </label>
+                                <br>
+                                <img id="plot_wtn_reservLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="reserv_wtn" id="reserv_wtn">
+                                <label class="form-check-label">
+                                    อ่างวังโตนด
+                                </label>
+                                <br>
+                                <img id="reserv_wtnLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="boun_kho15" id="boun_kho15">
+                                <label class="form-check-label">
+                                    แนวเขตเขาสิบห้าชั้น
+                                </label>
+                                <br>
+                                <img class="mb-3" id="boun_kho15Legend">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-header" id="headingfive">
+                <div class="container-fluid">
+                    <div id="headingfive">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapsefive"
+                                aria-expanded="true" aria-controls="collapsefive" id="H5_op" onclick="H5_open()">
+                                <label class="font-weight-bold" style="color: #444; ">
+                                    <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>&nbsp; EEC Watch Map
+                                </label>
+                            </button>
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapsefive"
+                                aria-expanded="true" aria-controls="collapsefive" id="H5_close" onclick="H5_close()">
+                                <label class="font-weight-bold" style="color: #0563bb;">
+                                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>&nbsp;<span
+                                        style="text-decoration:underline;"> EEC Watch Map</span>
+                                </label>
+                            </button>
+                        </h5>
+                    </div>
+                </div>
+                <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordion">
+                    <div class="card-box2 mw-100 m-auto" style="width: 90%; border-radius: 25px; 
+                box-shadow: 0px 20px 0px -20px  rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);">
+                        <ul>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="eec_promote24"
+                                    id="eec_promote24">
+                                <label class="form-check-label">
+                                    เขตส่งเสริมอุตสาหกรรม
+                                </label>
+                                <br>
+                                <img id="eec_promote24Legend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="military" id="military">
+                                <label class="form-check-label">
+                                    พื้นที่ทหาร
+                                </label>
+                                <br>
+                                <img id="militaryLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="tobe_promote" id="tobe_promote">
+                                <label class="form-check-label">
+                                    พื้นที่ที่กำลังจะประกาศเป็นเขตส่งเสริมฯ
+                                </label>
+                                <br>
+                                <img id="tobe_promoteLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="outside_area" id="outside_area">
+                                <label class="form-check-label">
+                                    พื้นที่นอกเหนือ
+                                </label>
+                                <br>
+                                <img id="outside_areaLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="special_act" id="special_act">
+                                <label class="form-check-label">
+                                    จุดเขตส่งเสริมกิจกรรมพิเศษ
+                                </label>
+                                <br>
+                                <img id="special_actLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="l_special_act"
+                                    id="l_special_act">
+                                <label class="form-check-label">
+                                    เขตส่งเสริมกิจกรรมพิเศษ
+                                </label>
+                                <br>
+                                <img id="l_special_actLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="l_special_act"
+                                    id="l_special_act">
+                                <label class="form-check-label">
+                                    เขตส่งเสริมกิจกรรมพิเศษ
+                                </label>
+                                <br>
+                                <img id="l_special_actLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="an_promote" id="an_promote">
+                                <label class="form-check-label">
+                                    เขตส่งเสริมที่ประกาศแล้ว
+                                </label>
+                                <br>
+                                <img class="mb-3" id="an_promoteLegend">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="accordion-header" id="headingsix">
+                <div class="container-fluid">
+                    <div id="headingsix">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapsesix"
+                                aria-expanded="true" aria-controls="collapsesix" id="H6_op" onclick="H6_open()">
+                                <label class="font-weight-bold" style="color: #444;">
+                                    <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>&nbsp; คุณภาพชีวิต
+                                    สอน.วังสมบูรณ์
+                                </label>
+                            </button>
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapsesix"
+                                aria-expanded="true" aria-controls="collapsesix" id="H6_close" onclick="H6_close()">
+                                <label class="font-weight-bold" style="color: #0563bb;">
+                                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>&nbsp; คุณภาพชีวิต
+                                    <span style="text-decoration:underline;">คุณภาพชีวิตสอน.วังสมบูรณ์</span>
+                                </label>
+                            </button>
+                        </h5>
+                    </div>
+                </div>
+                <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordion">
+                    <div class="card-box2 mw-100 m-auto" style="width: 90%; border-radius: 25px; 
+                box-shadow: 0px 20px 0px -20px  rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);">
+                        <ul>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="boun_tam_wsb" id="boun_tam_wsb">
+                                <label class="form-check-label">
+                                    ขอบเขตตำบลวังสมบูรณ์ (รายหมู่บ้าน)
+                                </label>
+                                <br>
+                                <img id="boun_tam_wsbLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="household" id="household">
+                                <label class="form-check-label">
+                                    ครัวเรือน
+                                </label>
+                                <br>
+                                <img id="householdLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="pressure" id="pressure">
+                                <label class="form-check-label">
+                                    ความดัน
+                                </label>
+                                <br>
+                                <img id="pressureLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="oldperson" id="oldperson">
+                                <label class="form-check-label">
+                                    ผู้สูงอายุ
+                                </label>
+                                <br>
+                                <img id="oldpersonLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="house_vill_m10"
+                                    id="house_vill_m10">
+                                <label class="form-check-label">
+                                    หลังคาเรือนหมู่ 10
+                                </label>
+                                <br>
+                                <img id="house_vill_m10Legend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="health_vol5" id="health_vol5">
+                                <label class="form-check-label">
+                                    อสม.หมู่5
+                                </label>
+                                <br>
+                                <img id="health_vol5Legend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="health_vol7" id="health_vol7">
+                                <label class="form-check-label">
+                                    อสม.หมู่7
+                                </label>
+                                <br>
+                                <img id="health_vol7Legend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="health_vol10" id="health_vol10">
+                                <label class="form-check-label">
+                                    อสม.หมู่10
+                                </label>
+                                <br>
+                                <img id="health_vol10Legend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="diabetes" id="diabetes">
+                                <label class="form-check-label">
+                                    เบาหวาน
+                                </label>
+                                <br>
+                                <img id="diabetesLegend">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="diab_press" id="diab_press">
+                                <label class="form-check-label">
+                                    เบาหวานร่วมความดัน
+                                </label>
+                                <br>
+                                <img class="mb-3" id="diab_pressLegend">
+                            </div>
+                        </ul>
+                    </div>
+
+                </div>
+            </div> -->
+        </div>
+    </tool>
+    <main id="main">
+
+        <!--=======Testimonials Section=======-->
+        <section class="section-bg" id="WMS">
+            <div class="box-listitem listitem-start show ">
+                5555+
+            </div>
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>แผนที่ภาพรวม</h2>
+                    <p>
+                        เป็นระบบที่รวบรวมข้อมูลภูมิสารสนเทศชุมชน ภายใต้เครือข่ายศูนย์ข้อมูลสารสนเทศชุมชนภาคตะวันออก
+                        (สชอ.) เพื่อให้ผู้ใช้งานสามารถเรียกดูชั้นข้อมูลเชิงพื้นที่ที่สนใจ
+                        <br> ประกอบไปด้วย 6 หมวด ได้แก่
+                        ข้อมูลทั่วไป แผนที่ฟื้นฟู-อนุรักษ์ธรรมชาติและสิ่งแวดล้อม ตะวันออกวิถีแห่งความสุข
+                        แผนที่แหล่งน้ำ
+                        (เขาสิบห้าชั้น) EEC Watch Map <br> และคุณภาพชีวิต สอน.วังสมบูรณ์
+                    </p>
+                </div>
+            </div>
+            <!-- <div class="card-box">
+                <div class="card-body">
+                    <button type="button" class="btn btn-success mb-2" onclick="layerModal()">
+                        <i class="lab la-buffer"></i>&nbsp; เลือกชั้นข้อมูล
+                    </button>
+                </div>
+            </div> -->
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box">
+                            <div class="card-body p-2">
+                                <div id="map"></div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card-box">
+                            <div class="card-body">
+                                <div>
+                                    <p class="bi bi-file-text align-items-center "
+                                        style="font-size: 24px; text-align: center; font-weight: bold;">
+                                        รายการข้อมูล
+                                    </p>
+                                    <div>
+                                        <p style="font-size: 16px; text-align: center; font-weight: bold;">
+                                            กรุณาคลิกบนแผนที่
+                                            เพื่อดูรายละเอียดของข้อมูล
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p style="font-size: px; text-align: center; font-weight: bold;">พิกัด
+                                            ละติจูด :
+                                            <span class="badge bg-warning ; text-dark" id="showlat"
+                                                style="font-size: 14px;"></span> <b>ลองจิจูด : </b><span
+                                                class="badge bg-warning text-dark" id="showlng"
+                                                style="font-size: 14px;"></span>
+                                        </p>
+                                        <br>
+                                        <div class="d-flex flex-row flex-wrap justify-content-center align-items-stretch scroll-xl align-items-center"
+                                            id="accordion_info">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Testimonials Section -->
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="background-color: #CACED3;">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright 2021 <strong><span>EnGRIDs by GeoCMU</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: [license-url] -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+                    Designed by <a href="https://engrids.soc.cmu.ac.th">EnGRIDs</a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- <script src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&amp;version=v2.5"></script> -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v11.0"
+        nonce="gAYMA0dL"></script>
+    <!-- Vendor JS Files -->
+    <script src="./../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="./../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="./../../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./../../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="./../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="./../../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="./../../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="./../../assets/vendor/typed.js/typed.min.js"></script>
+    <script src="./../../assets/vendor/aos/aos.js"></script>
+
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script> -->
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+    <!-- Template Main JS File -->
+    <script src="./../../assets/js/main.js"></script>
+    <script type="text/javascript" src="//libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
