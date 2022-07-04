@@ -1,0 +1,25 @@
+{
+  "name": "eac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server3000.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varissaracr/eac.git"
+  },
+  "keywords": [
+    "eac"
+  ],
+  "author": "cherry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varissaracr/eac/issues"
+  },
+  "homepage": "https://github.com/varissaracr/eac#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
