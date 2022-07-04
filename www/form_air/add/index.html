@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>รายงานข้อมูลมลพิษอากาศ</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="./../../assets/img/favicon.png" rel="icon">
+    <link href="./../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- start dooklink -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
+
+    <!--line-awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="./../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="./../../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <!-- Template Main CSS File -->
+    <link href="./../../assets/css/style.css" rel="stylesheet">
+    <link href="./../../assets/fontawesome/css/all.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="https://engrids.soc.cmu.ac.th/eac_cmu/main_eac/index.html"><i class="fas fa-home"></i>
+                        <span>หน้าหลัก</span></a></li>
+                <li><a href="./../../form_demo/dashboard/index.html"><i class="fas fa-bacon"></i>
+                        <span>ความมั่นทางอาหาร</span></a>
+                </li>
+                <li><a href="./../../db_water/index.html"><i class="fas fa-chart-line"></i>
+                        <span>รายงานข้อมูลน้ำผิวดิน</span></a></li>
+                <li><a href="./../../form_organizeV2/report/index.html"><i class="fas fa-users-cog"></i>
+                        <span>กลุ่มเครือข่าย/องค์กร</span></a></li>
+                <!-- <li><a href="#map_eac"><i class="bx bx-layer"></i> <span>ระบบสารสนเทศภูมิศาสตร์เพื่อชุมชน</span></a> -->
+                <li><a href="./../../dashboard_wms/report/index.html"><i class="fas fa-layer-group"></i>
+                        <span>แผนที่ภาพรวม</span></a></li>
+                </li>
+                <li><a href="./../../form_travel/dashboard/index.html"><i class="fas fa-suitcase"></i>
+                        <span>ท่องเที่ยวชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../form_notify/dashboard/index.html"><i class="fas fa-bullhorn"></i>
+                        <span>แจ้งปัญหาสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"> <i class="fas fa-tree"></i>
+                        <span>ทรัพยากรธรรมชาติและสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li class="active"><a href="#learning"><i class="fas fa-chalkboard-teacher"></i>
+                        <span>การเรียนรู้บนฐานชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"><i class="fas fa-exclamation-circle"></i>
+                        <span>เฝ้าระวังปัญหาผลกระทบจากมลพิษสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li onclick="gotoDashboard2()"><a href="#"><i class="fas fa-chart-line"></i>
+                        <span>รายงานข้อมูลมลพิษอากาศ</span></a></li>
+                <li class="active"><a href="#air"><i class="fa fa-plus"></i>
+                        <span>เพิ่มข้อมูลมลพิษอากาศ</span></a></li>
+
+                <!-- <li><a href="#contact"><i class="bx bx-envelope"></i> <span>ติดต่อ สชอ.</span></a></li> -->
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </header><!-- End Header -->
+
+    <main id="main">
+
+
+        <!-- ======= Testimonials Section ======= -->
+        <section class="section-bg w-100" id="air">
+            <div class="container w-100 mw-100">
+                <div class="section-title">
+                    <h2>รายงานนำข้อมูลมลพิษอากาศ</h2>
+                </div>
+                <div class="card p-4 d-flex flex-column mb-4">
+                    <div class="container-fluid">
+                        <h4>การนำเข้าข้อมูลมลพิษอากาศ</h4>
+                        <h6>กรุณาวางมุดมลพิษอากาศของท่านลงบนแผนที่ เพื่อนำเข้ารายละเอียดของมลพิษอากาศ</h6>
+                        <div class="mt-1 p-0">
+                            <div id="map"></div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 150px;"><b>ค่าพิกัด Lat :</b></span>
+                                    <input type="text" name="lat" class="form-control" id="lat" placeholder="lat">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 150px;"><b>ค่าพิกัด Lng :</b></span>
+                                    <input type="text" class="form-control" name="lng" id="lng" placeholder="lng">
+                                </div>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 250px;"><b>ความแม่นยำ (เมตร):</b></span>
+                                    <input type="text" class="form-control" name="accuracy" id="accuracy"
+                                        placeholder="ความแม่นยำ">
+                                </div>
+                            </div>
+                            <div class="col-md-3 ">
+                                <div class="form-group d-flex flex-row justify-content-around">
+                                    <button type="button" class="btn btn-secondary" onclick="markerlocate()">จับตำแหน่ง
+                                        gps</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="stoplocate()">เก็บค่าพิกัด</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 100px;"><b>จังหวัด :</b></span>
+                                    <select class="form-control" id="pro">
+                                        <option value="TH">ทุกจังหวัด</option>
+                                    </select><br>
+                                    <div class="invalid-feedback">
+                                        *ระบุจังหวัด
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 100px;">อำเภอ :</strong>
+                                    <select class="form-control" id="amp">
+                                    </select><br>
+                                    <div class="invalid-feedback">
+                                        *ระบุอำเภอ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 100px;">ตำบล :</strong>
+                                    <select class="form-control" id="tam">
+                                    </select><br>
+                                    <div class="invalid-feedback">
+                                        *ระบุตำบล
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <strong style='font-size:18px;'>ความรู้สึกท่านต่อคุณภาพอากาศ ณ ปัจจุบัน </strong><span
+                                style='font-size:54px;'> &#127780;</span>
+                            <hr>
+
+                            <div class="d-flex flex-row justify-content-around">
+                                <button class="btn btn-radius btn-light" onclick="getairval('แย่มาก')">
+                                    <span style='font-size:100px;'>&#128567;</span>
+                                    <span class="text-center">แย่มาก</span>
+                                </button>
+                                <button class="btn btn-radius btn-light" onclick="getairval('แย่')">
+                                    <span style='font-size:100px;'>&#128547;</span>
+                                    <span class="text-center">แย่</span>
+                                </button>
+                                <button class="btn btn-radius btn-light" onclick="getairval('ปานกลาง')">
+                                    <span style='font-size:100px;'>&#128528;</span>
+                                    <span class="text-center">ปานกลาง</span>
+                                </button>
+                                <button class="btn btn-radius btn-light" onclick="getairval('ดี')">
+                                    <span style='font-size:100px;'>&#128578;</span>
+                                    <span class="text-center">ดี</span>
+                                </button>
+                                <button class="btn btn-radius btn-light" onclick="getairval('ดีมาก')">
+                                    <span style='font-size:100px;'>&#128516;</span>
+                                    <span class="text-center">ดีมาก</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <span style='font-size:54px;'>&#127781; </span><strong style='font-size:18px;'>
+                                ข้อมูลคุณภาพอากาศปัจจุบัน
+                                (จากกรมควบคุมมลพิษ)</strong>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3 bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-around align-items-center"
+                                            style="border-right: 3px solid #9A9DA3;">
+                                            <strong>ดัชนีคุณภาพอากาศ (AQI)</strong>
+                                            <div class="d-flex flex-column text-center">
+                                                <span style="font-size: 48px;" id="aqi">-</span>
+                                                <span>AQI</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-around align-items-center"
+                                            style="border-right: 3px solid #9A9DA3;">
+                                            <strong>ฝุ่นละออง PM2.5</strong>
+                                            <div class="d-flex flex-column text-center">
+                                                <span style="font-size: 48px;" id="pm25">-</span>
+                                                <span>µg./m3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-around align-items-center"
+                                            style="border-right: 3px solid #9A9DA3;">
+                                            <strong>ค่าฝุ่นละออง PM10</strong>
+                                            <div class="d-flex flex-column text-center">
+                                                <span style="font-size: 48px;" id="pm10">-</span>
+                                                <span>µg./m3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-around align-items-center">
+                                            <strong>ก๊าซโอโซน (O3)</strong>
+                                            <div class="d-flex flex-column text-center">
+                                                <span style="font-size: 48px;" id="o3">-</span>
+                                                <span>ppm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm  bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-around align-items-center"
+                                            style="border-right: 3px solid #9A9DA3;">
+                                            <strong>ก๊าซคาร์บอนมอนอกไซด์ (CO)</strong>
+                                            <div class="d-flex flex-column text-center">
+                                                <span style="font-size: 48px;" id="co">-</span>
+                                                <span>ppm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm  bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-around align-items-center"
+                                            style="border-right: 3px solid #9A9DA3;">
+                                            <strong>ก๊าซไนโตรเจนไดออกไซด์ (NO2)</strong>
+                                            <div class="d-flex flex-column text-center">
+                                                <span style="font-size: 48px;" id="no2">-</span>
+                                                <span>ppm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm  bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-around align-items-center"
+                                            style="border-right: 3px solid #9A9DA3;">
+                                            <strong>ก๊าซซัลเฟอร์ไดออกไซด์ (SO2)</strong>
+                                            <div class="d-flex flex-column text-center">
+                                                <span style="font-size: 48px;" id="so2">-</span>
+                                                <span>ppm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm  bg-light">
+                                    <div class="card-body">
+                                        <strong>จุดตรวจวัด</strong>
+                                        <span id="stname"></span><br>
+                                        <p><span id="datetime"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <strong style="width: 100px;">อาการป่วย/ผลกระทบที่ได้รับจากปัญหามลพิษอากาศ</strong>
+                                <br>
+                                <select multiple="multiple" id="sick_list">
+                                    <optgroup label="────────────────────">
+                                        <option value="ไม่มีอาการ">ไม่มีอาการ</option>
+                                        <option value="คัดจมูก">คัดจมูก</option>
+                                        <option value="มีน้ำมูก">มีน้ำมูก</option>
+                                        <option value="แสบจมูก">แสบจมูก</option>
+                                        <option value="เลือดกำเดาไหล">เลือดกำเดาไหล</option>
+                                        <option value="แสบคอ">แสบคอ</option>
+                                        <option value="เสียงแหบ">เสียงแหบ</option>
+                                        <option value="ไอไม่มีเสมหะ">ไอไม่มีเสมหะ</option>
+                                        <option value="ไอมีเสมหะ"> ไอมีเสมหะ</option>
+                                        <option value="หายใจลำบาก">หายใจลำบาก</option>
+                                        <option value="หายใจมีเสียงหวีด">หายใจมีเสียงหวีด</option>
+                                        <option value="ปวดหัว">ปวดหัว</option>
+                                        <option value="เวียนหัว">เวียนหัว</option>
+                                        <option value="เหนื่อยง่ายผิดปกติ">เหนื่อยง่ายผิดปกติ</option>
+                                        <option value="เท้าบวมผิดปกติ">เท้าบวมผิดปกติ</option>
+                                        <option value="หัวใจเต้นเร็วผิดปกติ">หัวใจเต้นเร็วผิดปกติ</option>
+                                        <option value="คันตามร่างกาย">คันตามร่างกาย</option>
+                                        <option value="มีผื่นแดงตามร่างกาย">มีผื่นแดงตามร่างกาย</option>
+                                        <option value="คันตา/แสบตา">คันตา/แสบตา</option>
+                                        <option value="ตาแดง">ตาแดง</option>
+                                        <option value="น้ำตาไหลมากผิดปกติ">น้ำตาไหลมากผิดปกติ</option>
+                                        <option value="ปวดตา">ปวดตา</option>
+                                        <option value="มองภาพไม่ค่อยชัด">มองภาพไม่ค่อยชัด</option>
+                                    </optgroup>
+                                </select>
+                                <br>
+                                <strong id="wreview"></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-3">
+                        <h6 class="text-center">อัพโหลดรูปภาพบรรยากาศรูปภาพมลพิษอากาศโดยรอบ</h6>
+                        <hr>
+                        <div class="row">
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพมลพิษอากาศ 1</label>
+                                <input type="file" class="form-control-file" id="imgfile" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview" width="50%">
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพมลพิษอากาศ 2</label>
+                                <input type="file" class="form-control-file" id="imgfile2" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview2" width="50%">
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพมลพิษอากาศ 3</label>
+                                <input type="file" class="form-control-file" id="imgfile3" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview3" width="50%">
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพมลพิษอากาศ 4</label>
+                                <input type="file" class="form-control-file" id="imgfile4" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview4" width="50%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-center">
+                <br>
+                <br>
+                <br>
+                <button class="btn btn-success" disabled type="button" id="buttonsave" onclick="chkData()"><i
+                        class="bi bi-save"></i>&nbsp;บันทึก</button>&nbsp;&nbsp;
+            </div>
+            <!-- <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-light">กลับไปหน้าหลัก</button>
+                </div> -->
+            </div>
+        </section><!-- End Testimonials Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="background-color: #CACED3;">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright 2021 <strong><span>EnGRIDs by GeoCMU</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: [license-url] -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+                    Designed by <a href="https://engrids.soc.cmu.ac.th">EnGRIDs</a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
+
+    <div class="modal fade" id="chkgeommodal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="w3-animate-top"></div>
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <i class="bi bi-x-square-fill text-danger mr-2"
+                            style="font-size: 26px;"></i>บันทึกข้อมูลไม่สำเร็จ
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <br>
+                    <p style="font-size: 18px;  ">กรุณาวาดแปลงพื้นที่ป่าครอบครัวของท่าน ลงบนแผนที่</p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="confirmModal">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <!-- <div class="w3-animate-top"></div> -->
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <i class="bi bi-file-earmark-check-fill text-success mr-2" style="font-size: 26px;"></i>
+                        ยืนยันการบันทึกข้อมูล
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <br>
+                    <lord-icon src="https://cdn.lordicon.com/biwxmlnf.json" trigger="loop" colors="primary:#b4b4b4"
+                        style="width:65px;height:65px">
+                    </lord-icon>
+                    <p style="font-size: 18px;">ท่านต้องการบันทึกข้อมูลนี้
+                        <!-- <b><span id="projName"></span><br><span id="projTime"></span> 
+                        </b>--> ใช่หรือไม่?
+                    </p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="postData()">ยืนยัน</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteModal">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <!-- <div class="w3-animate-top"></div> -->
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <i class="bi bi-file-earmark-check-fill text-danger mr-2"
+                            style="font-size: 26px;"></i>ยืนยันการลบข้อมูล
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <br>
+                    <p style="font-size: 18px;">ท่านต้องการลบข้อมูล
+                        <b><span id="projName"></span><br><span id="projTime"></span>
+                        </b> ใช่หรือไม่?
+                    </p>
+                    <input type="hidden" id="projId">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="deleteValue()">ยืนยัน</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://cdn.datatables.net/plug-ins/1.11.1/dataRender/datetime.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/spiritedaway.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/moonrisekingdom.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <!-- Vendor JS Files -->
+    <!-- <script src="./../../assets/vendor/jquery/jquery.min.js"></script> -->
+    <script src="./../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="./../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="./../../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./../../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="./../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="./../../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="./../../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="./../../assets/vendor/typed.js/typed.min.js"></script>
+    <script src="./../../assets/vendor/aos/aos.js"></script>
+    <script src="./../../assets/vendor/aos/aos.js"></script>
+    <!-- Template Main JS File -->
+    <script src="./../../../eac_cmu/main_eac/assets/js/main.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

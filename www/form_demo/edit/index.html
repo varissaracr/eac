@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>ความมั่นคงทางอาหาร</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="./../assets/img/favicon.png" rel="icon">
+    <link href="./../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- start dooklink -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+
+    <!--line-awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="./../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="./../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <!-- Template Main CSS File -->
+    <link href="./../assets/css/style.css" rel="stylesheet">
+    <link href="./../assets/fontawesome/css/all.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="./../../main_eac/index.html"><i class="fas fa-home"></i>
+                        <span>หน้าหลัก</span></a></li>
+                <li class="active"><a href="#food"><i class="fas fa-bacon"></i> <span>ความมั่นทางอาหาร</span></a>
+                </li>
+                <li><a href="./../../db_water/index.html"><i class="fas fa-chart-line"></i>
+                        <span>รายงานข้อมูลน้ำผิวดิน</span></a></li>
+                <li><a href="./../../form_organize/report/index.html"><i class="fas fa-users-cog"></i>
+                        <span>กลุ่มเครือข่าย/องค์กร</span></a></li>
+                <!-- <li><a href="#map_eac"><i class="bx bx-layer"></i> <span>ระบบสารสนเทศภูมิศาสตร์เพื่อชุมชน</span></a> -->
+                <li><a href="./../../dashboard_wms/report/index.html"><i class="fas fa-layer-group"></i>
+                        <span>แผนที่ภาพรวม</span></a></li>
+                </li>
+                <li class="./../../form_travel/dashboard/index.html"><a href="#travel"><i class="fas fa-suitcase"></i>
+                        <span>ท่องเที่ยวชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../form_notify/dashboard/index.html"><i class="fas fa-bullhorn"></i>
+                        <span>แจ้งปัญหาสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"> <i class="fas fa-tree"></i>
+                        <span>ทรัพยากรธรรมชาติและสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../form_learning/dashboard/index.html"><i class="fas fa-chalkboard-teacher"></i>
+                        <span>การเรียนรู้บนฐานชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"><i class="fas fa-exclamation-circle"></i>
+                        <span>เฝ้าระวังปัญหาผลกระทบจากมลพิษสิ่งแวดล้อม</span></a></li>
+                </li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </header><!-- End Header -->
+
+    <main id="main">
+
+
+        <!-- ======= Testimonials Section ======= -->
+        <section class="section-bg" id="food">
+            <div class="container">
+                <div class="section-title">
+                    <h2>แก้ไข้ข้อมูลความมั่นคงทางอาหาร</h2>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="form-group card p-4">
+                        <h5 class="mb-0">ที่อยู่/ที่ตั้งของแปลง</h5>
+                        <hr>
+                        <div id="map"></div><br>
+                        <div class="form-row d-flex align-items-end">
+                            <div class="col-md-3 form-group">
+                                <label>ค่าพิกัด Lat</label>
+                                <input type="text" name="lat" class="form-control" id="lat" placeholder="lat"
+                                    readonly />
+
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label>ค่าพิกัด Lng</label>
+                                <input type="text" class="form-control" name="lng" id="lng" placeholder="lng"
+                                    readonly />
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label>ความแม่นยำ (เมตร)</label>
+                                <input type="text" class="form-control" name="accuracy" id="accuracy"
+                                    placeholder="ความแม่นยำ" readonly />
+                            </div>
+                            <div class="col-md-3 ">
+                                <div class="form-group d-flex flex-row justify-content-around">
+                                    <button type="button" class="btn btn-secondary" onclick="markerlocate()">จับตำแหน่ง
+                                        gps</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="stoplocate()">เก็บค่าพิกัด</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="sel1">จังหวัด:</label>
+                                    <!-- <select class="form-control" id="pro">
+                                        <option value="TH">ทุกจังหวัด</option>
+                                    </select> -->
+                                    <input type="text" class="form-control" id="pro1">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="sel1">อำเภอ:</label>
+                                    <!-- <select class="form-control" id="amp">
+                                    </select> -->
+                                    <input type="text" class="form-control" id="amp1">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="sel1">ตำบล:</label>
+                                    <!-- <select class="form-control" id="tam">
+                                    </select> -->
+                                    <input type="text" class="form-control" id="tam1">
+                                </div>
+                            </div>
+                        </div><br>
+                    </div>
+                    <div class="form-group card p-4">
+                        <h5 class="mb-0">รายละเอียดของแปลง</h5>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>แปลงที่</label>
+                                    <input type="text" class="form-control" id="atID">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>การถือครองที่ดินเพาะปลูก</label>
+                                    <select class="form-control" id="landownership">
+                                        <option value="เช่า">เช่า</option>
+                                        <option value="ตนเอง/คนในครอบครัว">ตนเอง/คนในครอบครัว</option>
+                                        <option value="other">อื่นๆ</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="other1">
+                                    <label>ระบุการถือครองที่ดินเพาะปลูก</label>
+                                    <input type="text" class="form-control" id="landowherother">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>ประเภทที่ดินในการเพาะปลูก</label>
+                                    <select class="form-control" id="landusefarm">
+                                        <option value="สปก">สปก.</option>
+                                        <option value="โฉนด/นส3">โฉนด/นส3.</option>
+                                        <option value="other">อื่นๆ (ภบท,สค) </option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="other2">
+                                    <label>ระบุประเภทที่ดินในการเพาะปลูก</label>
+                                    <input type="text" class="form-control" id="landuseother">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>ขนาดพื้นที่</label>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <input type="number" class="form-control" id="areafarm">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <select class="form-control" id="unitfarm">
+                                                <option value="ไร่">ไร่</option>
+                                                <option value="งาน">งาน</option>
+                                                <option value="ตารางวา">ตารางวา</option>
+                                                <option value="ตารางเมตร">ตารางเมตร</option>
+                                                <option value="ตารางกิโลเมตร">ตารางกิโลเมตร</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>รูปแบบการผลิต</label>
+                                    <select class="form-control" id="productionmodel">
+                                        <option value="เกษตรอินทรีย์">เกษตรอินทรีย์</option>
+                                        <option value="เกษตรปลอดภัย">เกษตรปลอดภัย</option>
+                                        <option value="เกษตรผสมผสาน">เกษตรผสมผสาน</option>
+                                        <option value="เกษตรเชิงเดียว">เกษตรเชิงเดียว</option>
+                                        <option value="วนเกษตร">วนเกษตร</option>
+                                        <option value="other">อื่นๆ</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="other3">
+                                    <label>ระบุรูปแบบการผลิต</label>
+                                    <input type="text" class="form-control" id="productmodelother">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>มาตรฐานการรับรอง</label>
+                                    <select class="form-control" id="standard">
+                                        <option value="ยังไม่ได้รับมาตรฐานรับรอง">ยังไม่ได้รับมาตรฐานรับรอง</option>
+                                        <option value="ได้รับมาตรฐานรับรอง">ได้รับมาตรฐานรับรอง</option>
+                                        <option value="ไม่ระบุ">ไม่ระบุ</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>ประเภทการรับรองมาตรฐาน</label>
+                                    <select class="form-control" id="standardtype" disabled>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="other5A">
+                                    <label>ระบุประเภทการรับรองมาตรฐาน</label>
+                                    <input type="text" class="form-control" id="standardother1">
+                                </div>
+                                <div class="form-group" id="other5B">
+                                    <label>ระบุประเภทมาตรฐาน PGS จากกลุ่ม/องค์กรหรือเครือข่าย</label>
+                                    <input type="text" class="form-control" id="standardother2">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group card p-4">
+                        <h5 class="mb-0">ประเภทผลผลิต</h5>
+                        <hr>
+                        <div class="form-group row text-center">
+                            <div class="col-sm-4 mb-2">
+                                <i class="fas fa-seedling  mt-2" style="font-size: 24px;"></i> <span
+                                    style="font-size: 18px;"><b> ข้าว</b></span>
+                                <textarea class="form-control" rows="4" aria-label="With textarea"
+                                    placeholder="ระบุประเภทผลผลิต" id="noA3"></textarea>
+                            </div>
+                            <div class="col-sm-4 mb-2">
+                                <i class="fas fa-carrot  mt-2" style="font-size: 24px;"></i> <span
+                                    style="font-size: 18px;"><b> ผัก</b></span>
+                                <textarea class="form-control" rows="4" aria-label="With textarea"
+                                    placeholder="ระบุประเภทผลผลิต" id="noB3"></textarea>
+                            </div>
+                            <div class="col-sm-4 mb-2">
+                                <i class="fas fa-apple-alt  mt-2 " style="font-size: 24px;"></i> <span
+                                    style="font-size: 18px;"><b> ผลไม้</b></span>
+                                <textarea class="form-control" rows="4" aria-label="With textarea"
+                                    placeholder="ระบุประเภทผลผลิต" id="noC3"></textarea>
+                            </div>
+                            <div class="col-sm-4 mb-2">
+                                <i class="fas fa-leaf  mt-2" style="font-size: 24px;"></i> <span
+                                    style="font-size: 18px;">
+                                    <b> พืชสมุนไพร</b></span>
+                                <textarea class="form-control" rows="4" aria-label="With textarea"
+                                    placeholder="ระบุประเภทผลผลิต" id="noD3"></textarea>
+                            </div>
+                            <div class="col-sm-4 mb-2">
+                                <i class="fas fa-paw  mt-2" style="font-size: 24px;"></i> <span
+                                    style="font-size: 18px;">
+                                    <b> ปศุสัตว์/เพาะเลี้ยง</b></span>
+                                <textarea class="form-control" rows="4" aria-label="With textarea"
+                                    placeholder="ระบุประเภทผลผลิต" id="noE3"></textarea>
+                            </div>
+                            <div class="col-sm-4 mb-2">
+                                <i class="fas fa-fish  mt-2" style="font-size: 24px;"></i> <span
+                                    style="font-size: 18px;">
+                                    <b> ประมงน้ำจืด</b></span>
+                                <textarea class="form-control" rows="4" aria-label="With textarea"
+                                    placeholder="ระบุประเภทผลผลิต" id="noF3"></textarea>
+                            </div>
+                            <div class="col-sm-4 mb-2">
+                                <i class="fas fa-ship  mt-2" style="font-size: 24px;"></i> <span
+                                    style="font-size: 18px;">
+                                    <b> ประมงชายฝั่ง</b></span>
+                                <textarea class="form-control" rows="4" aria-label="With textarea"
+                                    placeholder="ระบุประเภทผลผลิต" id="noG3"></textarea>
+                            </div>
+                            <div class="col-sm-4 mb-2">
+                                <i class="fas fa-exchange-alt  mt-2" style="font-size: 24px;"></i> <span
+                                    style="font-size: 18px;"><b> การแปรรูป</b></span>
+                                <textarea class="form-control" rows="4" aria-label="With textarea"
+                                    placeholder="ระบุประเภทผลผลิต" id="noH3"></textarea>
+                            </div>
+                            <div class="col-sm-4 mb-2">
+                                <i class="fas fa-air-freshener mt-2" style="font-size: 24px;"></i> <span
+                                    style="font-size: 18px;"><b> อื่นๆ</b></span>
+                                <textarea class="form-control" rows="4" aria-label="With textarea"
+                                    placeholder="ระบุประเภทผลผลิต" id="noI3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group card p-4">
+                        <h5 class="mb-0">รายได้-รายจ่าย</h5>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>จำนวนผลผลิตเฉลี่ยต่อไร่ (กิโลกรัม)</label>
+                                    <input type="number" class="form-control" id="averageyield">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>รายได้เฉลี่ยต่อเดือน (บาท)</label>
+                                    <select multiple class="form-control" id="averageincome" required>
+                                        <option value="5000">
+                                            < 5,000 </option>
+                                        <option value="10000">5,000-10,000</option>
+                                        <option value="25000">10,001-25,000</option>
+                                        <option value="50000">25,001-50,000</option>
+                                        <option value="50001">> 50,000</option>
+                                        <option value="ไม่ระบุ">ไม่ระบุ</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>ต้นทุนการผลิตเฉลี่ยต่อเดือน (บาท)</label>
+                                    <select multiple class="form-control" id="averageexpenses" required>
+                                        <option value="1000">
+                                            < 1,000 </option>
+                                        <option value="2500">1,000-2,500</option>
+                                        <option value="5000">2,501-5,000</option>
+                                        <option value="10000">5,001-10,000</option>
+                                        <option value="10001">> 10,000</option>
+                                        <option value="ไม่ระบุ">ไม่ระบุ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group card p-4">
+                        <h5 class="mb-0">การนำผลผลิตมาใช้ประโยชน์</h5>
+                        <hr>
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"
+                                        value="ใช้ประกอบการทำอาหารในครัวเรือน" id="Ucook">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        ใช้ประกอบการทำอาหารในครัวเรือน
+                                    </label>
+                                    <div id="Ut1">
+                                        <div
+                                            class="row text-center d-flex flex-nowrap align-items-center justify-content-evenly ml-2">
+                                            <label>เลือกระดับ: </label>&nbsp;&nbsp;&nbsp;
+                                            <div class="w-20 mw100">
+                                                <select class="form-control" id="Utv1">
+                                                    <option value="น้อย">น้อย</option>
+                                                    <option value="ปานกลาง">ปานกลาง</option>
+                                                    <option value="มาก">มาก</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="นำมาแลกเปลี่ยนกันในชุมชน"
+                                        id="Uexchange">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        นำมาแลกเปลี่ยนกันในชุมชน
+                                    </label>
+                                    <div id="Ut2">
+                                        <div
+                                            class="row text-center d-flex flex-nowrap align-items-center justify-content-evenly ml-2">
+                                            <label>เลือกระดับ: </label>&nbsp;&nbsp;&nbsp;
+                                            <div class="w-20 mw100">
+                                                <select class="form-control" id="Utv2">
+                                                    <option value="น้อย">น้อย</option>
+                                                    <option value="ปานกลาง">ปานกลาง</option>
+                                                    <option value="มาก">มาก</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="นำไปแปรรูป" id="Utranform">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        นำไปแปรรูป
+                                    </label>
+                                    <div id="Ut3">
+                                        <div
+                                            class="row text-center d-flex flex-nowrap align-items-center justify-content-evenly ml-2">
+                                            <label>เลือกระดับ: </label>&nbsp;&nbsp;&nbsp;
+                                            <div class="w-20 mw100">
+                                                <select class="form-control" id="Utv3">
+                                                    <option value="น้อย">น้อย</option>
+                                                    <option value="ปานกลาง">ปานกลาง</option>
+                                                    <option value="มาก">มาก</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="ส่งให้พ่อค้าคนกลาง"
+                                        id="Umiddleman">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        ส่งให้พ่อค้าคนกลาง
+                                    </label>
+                                    <div id="Ut4">
+                                        <div
+                                            class="row text-center d-flex flex-nowrap align-items-center justify-content-evenly ml-2">
+                                            <label>เลือกระดับ: </label>&nbsp;&nbsp;&nbsp;
+                                            <div class="w-20 mw100">
+                                                <select class="form-control" id="Utv4">
+                                                    <option value="น้อย">น้อย</option>
+                                                    <option value="ปานกลาง">ปานกลาง</option>
+                                                    <option value="มาก">มาก</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="ไม่มีการนำไปใช้ประโยชน์"
+                                        id="Nouse">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        ไม่มีการนำไปใช้ประโยชน์
+                                    </label>
+
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="other" id="Uother">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        อื่นๆ
+                                    </label>
+                                    <textarea class="form-control" rows="2" aria-label="With textarea"
+                                        placeholder="ระบุการนำผลผลิตมาใช้ประโยชน์" id="Uotherdetail"></textarea>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group card p-4">
+                        <h5 class="mb-0">ช่องทางการกระจายสินค้า</h5>
+                        <hr>
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="ส่งเครือข่ายในภาค"
+                                        id="Dregion">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        ส่งเครือข่ายในภาค
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="ส่งเครือข่ายในตำบล/จังหวัด"
+                                        id="Dcanton">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        ส่งเครือข่ายในตำบล/จังหวัด
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="ขายเอง" id="Dtrade">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        ซื้อขายกันเอง
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="ไม่มีการกระจายผลผลิต"
+                                        id="Nodistribution">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        ไม่มีการกระจายผลผลิต
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="other" id="Disother">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        อื่นๆ
+                                    </label>
+                                    <!-- <input type="text" class="form-control" id="diseaseName"
+                                            placeholder="โปรดระบุโรคประจำตัว"> -->
+                                    <textarea class="form-control" rows="2" aria-label="With textarea"
+                                        placeholder="ระบุช่องทางการกระจายสินค้า" id="Disotherdetail"></textarea>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group card p-4">
+                        <h5 class="mb-0">รายละเอียดเพิ่มเติม</h5>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>ประเภทแรงงานหลักที่ใช้</label>
+                                    <select multiple class="form-control" id="typelabor">
+                                        <option value="จ้างคนในชุมชน">จ้างคนในชุมชน</option>
+                                        <option value="ตนเอง/คนในครอบครัว">ตนเองหรือคนในครอบครัว</option>
+                                        <option value="แรงงานเพื่อนบ้าน(ต่างประเทศ)">แรงงานเพื่อนบ้าน (ต่างประเทศ)
+                                        </option>
+                                        <option value="ไม่ระบุ">ไม่ระบุ</option>
+                                        <option value="other">อื่นๆ</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="other6">
+                                    <label>ระบุประเภทแรงงานหลักที่ใช้</label>
+                                    <input type="text" class="form-control" id="laborother">
+                                </div>
+                                <div class="form-group">
+                                    <label>จำนวนแรงงานที่ใช้ (คน)</label>
+                                    <input type="number" class="form-control" id="labornum">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <h6><label for="img">อัพโหลดรูปภาพแปลง</label></h6>
+                                    <input type="file" class="form-control-file" id="imgfile">
+                                    <img src="" id="preview" width="250px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="gwdate">วันที่เก็บข้อมูล</label>
+                                <input type="date" class="form-control" id="date" required>
+                            </div>
+                            <div class="col-sm">
+                                <label for="record">ผู้ให้ข้อมูล</label>
+                                <input type="text" class="form-control" id="record" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center flex-row">
+                    <button class="btn btn-3bb mr-1" type="button" onclick="savedata()">บันทึกข้อมูล</button>
+                    <button type="button" class="btn btn-light" onclick="gotoDashboard()">หน้ารายงาน</button>
+                </div>
+                <!-- <div class="row mt-1">
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <div class="circle-icon">
+                                    <i class="icofont-google-map" style="color: #FFFF; font-size: 24px;"></i>
+                                </div>
+                                <h4>ที่อยู่:</h4>
+                                <p>เครือข่ายศูนย์ข้อมูลสารสนเทศชุมชนภาคตะวันออก ตำบล xx อำเภอ xx จังหวัด xx</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="icofont-envelope" style="color: #0563bb; font-size: 24px;"></i>
+                                <h4>Email:</h4>
+                                <p>eac2564@gmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="icofont-phone" style="color: #0563bb; font-size: 24px;"></i>
+                                <h4>หมายเลขโทรศัพท์:</h4>
+                                <p>+ 66 xxx xxx xxx</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="form-row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="ชื่อ-นามสกุลของท่าน" data-rule="minlen:4"
+                                        data-msg="Please enter at least 4 chars" />
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="อีเมล์ของท่าน" data-rule="email"
+                                        data-msg="Please enter a valid email" />
+                                    <div class="validate"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="เรื่องที่ต้องการติดต่อ" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                                    data-msg="Please write something for us"
+                                    placeholder="ข้อความที่ท่านต้องการส่งถึง สชอ."></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="loading">กำลังโหลด</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">ข้อความของท่านได้ถูกส่งมาหาเราเรียบร้อยแล้ว ขอบคุณค่ะ
+                                </div>
+                            </div>
+                            <div class="text-center"><button type="submit">ส่งข้อความ</button></div>
+
+                            <div class="form-group">
+                                <h6><label for="img">อัพโหลดรูปภาพ</label></h6>
+                                <input type="file" class="form-control-file" id="imgfile">
+                                <img src="" id="preview" width="250px">
+                            </div>
+                            <button type="submit" onclick="savedata()">save</button>
+                    </div>
+                    </form>
+
+                </div> -->
+
+            </div>
+            </div>
+        </section><!-- End Testimonials Section -->
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="background-color: #CACED3;">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright 2021 <strong><span>EnGRIDs by GeoCMU</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: [license-url] -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+                    Designed by <a href="https://engrids.soc.cmu.ac.th">EnGRIDs</a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div class="modal fade bd-example-modal-lg" id="Modalconfirm" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="w3-animate-top">
+                <div class="modal-content">
+                    <div class="modal-header d-flex align-items-center" style="background: #e5e6e5;">
+                        <h4 class="modal-title">
+                            <i class="bi bi-file-earmark-check-fill text-primary mr-2"
+                                style="font-size: 26px;"></i>ยืนยันการบันทึกข้อมูล
+                        </h4>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button> -->
+                    </div>
+                    <div class="modal-body text-center mx-auto">
+                        <p style="font-size: 18px;">ท่านต้องการบันทึกข้อมูลนี้ใช่หรือไม่</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+                        <a href="./../dashboard/index.html" class="btn btn-3bb">ยืนยัน</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- <script src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&amp;version=v2.5"></script> -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v11.0"
+        nonce="gAYMA0dL"></script>
+    <!-- Vendor JS Files -->
+    <script src="./../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="./../assets/vendor/php-email-form/validate.js"></script>
+    <script src="./../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="./../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="./../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="./../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="./../assets/vendor/typed.js/typed.min.js"></script>
+    <script src="./../assets/vendor/aos/aos.js"></script>
+
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script> -->
+
+
+
+    <!-- Template Main JS File -->
+    <script src="./../assets/js/main.js"></script>
+    <script type="text/javascript" src="//libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    <script src="./app.js"></script>
+    <!-- <script src="./app2.js"></script> -->
+
+</body>
+
+</html>
