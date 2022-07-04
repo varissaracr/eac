@@ -1,0 +1,44 @@
+body {
+    font-family: "Kanit", sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.72222;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    background-color: #F4FAFF;
+    border-radius: 15px;
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 0px 46px rgba(0, 0, 0, 0.04);
+}
+
+#map {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+}
+
+.leaflet-control-layers-list {
+    margin-top: -50px;
+    margin-bottom: -50px;
+    height: fit-content;
+}
+.fk-14 {
+font-family: "Kanit", sans-serif !important;
+font-size: 14px !important;
+}
+.disabledbox {
+    pointer-events: none;
+    filter: grayscale(100%);
+    opacity: 0.4;
+}

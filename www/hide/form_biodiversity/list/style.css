@@ -1,0 +1,24 @@
+.wqchart{
+    height: 250px;
+}
+
+.m{
+    margin: 2px 2px 2px 2px;
+}
+
+#map{
+    height: 420px;
+}
+
+.btn-margin{
+    margin: 2px;
+}
+
+.chart {
+    width: 100%;
+    height: 400px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}

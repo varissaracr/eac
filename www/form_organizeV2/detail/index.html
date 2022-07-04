@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>แบบสำรวจองค์กรเครือข่ายภาคตะวันออก</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="./../../assets/img/favicon.png" rel="icon">
+    <link href="./../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- start dooklink -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+
+    <!--line-awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="./../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="./../../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <!-- Template Main CSS File -->
+    <link href="./../../assets/css/style.css" rel="stylesheet">
+    <link href="./../../assets/fontawesome/css/all.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+
+        <nav class="nav-menu">
+            <ul>
+                <li class="active"><a href="./../../main_eac/index.html"><i class="bx bx-home"></i>
+                        <span>หน้าหลัก</span></a></li>
+                <li><a href="./../../main_eac/index.html#testimonials"><i class="bx bx-file-blank"></i>
+                        <span>ข่าวสาร/ประชาสัมพันธ์</span></a></li>
+                <li><a href="./../../main_eac/index.html#facts"><i class="bx bx-book-content"></i>
+                        <span>กลุ่มเครือข่าย/องค์กร</span></a></li>
+                <li><a href="./../../main_eac/index.html#services"><i class="bx bx-server"></i>
+                        <span>ระบบนำเข้าทรัพยากรและสิ่งแวดล้อมชุมชน</span></a></li>
+                <!-- <li><a href="#map_eac"><i class="bx bx-layer"></i> <span>ระบบสารสนเทศภูมิศาสตร์เพื่อชุมชน</span></a> -->
+                <li><a href="./../../main_eac/index.html#about"><i class="bx bx-user"></i> <span>เกี่ยวกับ
+                            สชอ.</span></a></li>
+                </li>
+
+                <li><a href="./../../main_eac/index.html#contact"><i class="bx bx-envelope"></i> <span>ติดต่อ
+                            สชอ.</span></a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </header><!-- End Header -->
+
+    <main id="main">
+
+
+        <!-- ======= Testimonials Section ======= -->
+        <section class="section-bg">
+            <div class="container">
+                <div class="section-title">
+                    <h2>แบบสำรวจองค์กรเครือข่ายภาคตะวันออก</h2>
+                </div>
+                <div class="d-flex flex-column">
+
+                    <form id="dataform">
+                        <div class="form-group card p-4">
+                            <h3 class="text-center">ส่วนที่ 1 ข้อมูลทั่วไป</h3>
+                            <hr>
+                            <div class="row" style="font-size: 16px;">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <i class="fas fa-users"></i>&nbsp;<label>ชื่อกลุ่ม เครือข่าย องค์กร</label>
+                                        <input type="text" class="form-control" id="orgname" name="orgname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <i class="fas fa-user-tie"></i>&nbsp;<label>ชื่อผู้ประสาน</label>
+                                        <input type="text" class="form-control" id="orgcontact" name="orgcontact">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <i class="fas fa-mobile-alt"></i>&nbsp;<label>เบอร์โทรติดต่อ</label>
+                                        <input type="text" class="form-control" id="orgtel" name="orgtel">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <i class="fas fa-envelope"></i>&nbsp;<label>email</label>
+                                        <input type="text" class="form-control" id="orgemail" name="orgemail">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <i class="fab fa-line"></i></i>&nbsp;<label>line</label>
+                                        <input type="text" class="form-control" id="orgline" name="orgline">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <i class="bi bi-facebook"></i>&nbsp;<label>facebook</label>
+                                        <input type="text" class="form-control" id="orgfacebook" name="orgfacebook">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <i class="fab fa-internet-explorer"></i>&nbsp;<label>website</label>
+                                        <input type="text" class="form-control" id="website" name="website">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group card p-4">
+                            <h3 class="text-center">ส่วนที่ 2 ประธาน/หัวหน้ากลุ่ม</h3>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>ชื่อ-สกุล หัวหน้ากลุ่ม</label>
+                                        <input type="text" class="form-control" id="headname" name="headname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>เลขที่</label>
+                                        <input type="text" class="form-control" id="headvno" name="headvno">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>หมู่ที่</label>
+                                        <input type="text" class="form-control" id="headvmoo" name="headvmoo">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>ชื่อหมู่บ้าน</label>
+                                        <input type="text" class="form-control" id="headvname" name="headvname">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>จังหวัด</label>
+                                        <select class="form-control" id="headpro" name="headpro">
+                                            <option value=""></option>
+                                            <option value="22">จันทบุรี</option>
+                                            <option value="24">ฉะเชิงเทรา</option>
+                                            <option value="20">ชลบุรี</option>
+                                            <option value="23">ตราด</option>
+                                            <option value="26">นครนายก</option>
+                                            <option value="25">ปราจีนบุรี</option>
+                                            <option value="21">ระยอง</option>
+                                            <option value="27">สระแก้ว</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>อำเภอ</label>
+                                        <select class="form-control" id="headamp" name="headamp"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>ตำบล</label>
+                                        <select class="form-control" id="headtam" name="headtam"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group card p-4">
+                            <h3 class="text-center">ส่วนที่ 3 สถานที่ตั้งกลุ่ม เครือข่าย องค์กร</h3>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label>บ้านเลขที่</label>
+                                        <input type="text" class="form-control" id="orgvno" name="orgvno">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label>หมู่ที่</label>
+                                        <input type="text" class="form-control" id="orgvmoo" name="orgvmoo">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label>ชื่อหมู่บ้าน</label>
+                                        <input type="text" class="form-control" id="orgvname" name="orgvname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label>จังหวัด</label>
+                                        <select class="form-control" id="pro" onchange="getAmp(this.value)">
+                                            <option value=""></option>
+                                            <option value="22">จันทบุรี</option>
+                                            <option value="24">ฉะเชิงเทรา</option>
+                                            <option value="20">ชลบุรี</option>
+                                            <option value="23">ตราด</option>
+                                            <option value="26">นครนายก</option>
+                                            <option value="25">ปราจีนบุรี</option>
+                                            <option value="21">ระยอง</option>
+                                            <option value="27">สระแก้ว</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label>อำเภอ</label>
+                                        <select class="form-control" id="amp" onchange="getTam(this.value)"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label>ตำบล</label>
+                                        <select class="form-control" id="tam" onchange="getTamOne(this.value)"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <input type="hidden" id="pro_name">
+                            <input type="hidden" id="amp_name">
+                            <input type="hidden" id="tam_name">
+
+                            <label>ย้ายหมุดไปยังสถานที่ทำการของท่าน</label>
+                            <div id="map"></div>
+
+                            <div class="form-group row">
+                                <div class="col">
+                                    <label>ละติจูด</label>
+                                    <input type="number" class="form-control" id="lat" name="lat" disabled>
+                                </div>
+                                <div class="col">
+                                    <label>ลองจิจูด</label>
+                                    <input type="number" class="form-control" id="lon" name="lon" disabled>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label for="insti"><b>ประเภทงานของกลุ่ม เครือข่าย องค์กร</b></label>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="">
+                                            <span class="text-center"><b>กลุ่ม/องค์กร</b></span>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="เกษตร(เกษตรอินทรีย์ เกษตรปลอดภัย ฯ)" id="typ_organic"
+                                                    name="typ_organic">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    เกษตร(เกษตรอินทรีย์ เกษตรปลอดภัย ฯ)
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="ท่องเที่ยวชุมชน"
+                                                    id="typ_commutrav" name="typ_commutrav">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    ท่องเที่ยวชุมชน
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="ชุมชนน่าอยู่"
+                                                    id="typ_commucomfort" name="typ_commucomfort">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    ชุมชนน่าอยู่
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="การเรียนรู้บนฐานชุมชน" id="typ_commulearn"
+                                                    name="typ_commulearn">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    การเรียนรู้บนฐานชุมชน
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="กลุ่มอาชีพ เศรษฐกิจชุมชน" id="typ_commuecon"
+                                                    name="typ_commuecon">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    กลุ่มอาชีพ/เศรษฐกิจชุมชน
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-2">
+                                            <span class="text-center "><b>ด้านทรัพยากรธรรมชาติ</b></span>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="ทรัพยากร ป่าชุมชน" id="typ_commuforest"
+                                                    name="typ_commuforest">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    ทรัพยากร ป่าชุมชน
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="ทรัพยากร ป่าครอบครัว วนเกษตร" id="typ_houseforest"
+                                                    name="typ_houseforest">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    ทรัพยากร ป่าครอบครัว วนเกษตร
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="ทรัพยากร ป่าชายเลน" id="typ_mangforest"
+                                                    name="typ_mangforest">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    ทรัพยากร ป่าชายเลน
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="ทรัพยากร การจัดการน้ำ" id="typ_watmanage"
+                                                    name="typ_watmanage">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    ทรัพยากร การจัดการน้ำ
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="ทรัพยากร ที่ดิน"
+                                                    id="typ_landmange" name="typ_landmange">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    ทรัพยากร ที่ดิน
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="ทรัพยากร ประมงและชายฝั่ง" id="typ_fishing"
+                                                    name="typ_fishing">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    ทรัพยากร ประมงและชายฝั่ง
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-2">
+                                            <span class="text-center "><b>ด้านสิ่งแวดล้อม</b></span>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="สิ่งแวดล้อม ด้านขยะอุตสาหกรรม" id="typ_industwaste"
+                                                    name="typ_industwaste">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    สิ่งแวดล้อม ด้านขยะอุตสาหกรรม
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="สิ่งแวดล้อม ด้านขยะครัวเรือน" id="typ_housewaste"
+                                                    name="typ_housewaste">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    สิ่งแวดล้อม ด้านขยะครัวเรือน
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="สิ่งแวดล้อม ทางอากาศ" id="typ_airpollution"
+                                                    name="typ_airpollution">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    สิ่งแวดล้อม ทางอากาศ
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    value="สิ่งแวดล้อม ทางเสียง" id="typ_noisepollution"
+                                                    name="typ_noisepollution">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    สิ่งแวดล้อม ทางเสียง
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <span class="text-center"><b>เครือข่าย</b></span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="สภาองค์กรชุมชนในภาคตะวันออก-เครือข่ายสวัสดิการชุมชน"
+                                                id="typ_eastorganize" name="typ_eastorganize">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                สภาองค์กรชุมชนในภาคตะวันออก-เครือข่ายสวัสดิการชุมชน
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="กลุ่มชาวบ้านผู้ได้รับผลกระทบจากโครงการ-นโยบาย เครือข่ายที่ดิน
+                                                และพื้นที่มาบตาพุด" id="typ_impactedcommu" name="typ_impactedcommu">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                กลุ่มชาวบ้านผู้ได้รับผลกระทบจากโครงการ-นโยบาย เครือข่ายที่ดิน
+                                                และพื้นที่มาบตาพุด
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="เครือข่ายเกษตรอินทรีย์" id="typ_orgniccommu"
+                                                name="typ_orgniccommu">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายเกษตรอินทรีย์
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="เครือข่ายวนเกษตรและเครือข่ายป่าชุมชน และเครอข่ายที่ดินในเขตป่า"
+                                                id="typ_famforestcommu" name="typ_famforestcommu">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายวนเกษตรและเครือข่ายป่าชุมชน และเครอข่ายที่ดินในเขตป่า
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="เครือข่ายประมงและชายฝั่งทะเลภาคตะวันออก +เครือข่ายประมงน้ำจืด"
+                                                id="typ_eastfisher" name="typ_eastfisher">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายประมงและชายฝั่งทะเลภาคตะวันออก +เครือข่ายประมงน้ำจืด
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="เครือข่ายการเรียนรู้บนฐานชุมชน" id="typ_learnningnet"
+                                                name="typ_learnningnet">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายการเรียนรู้บนฐานชุมชน
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="เครือข่ายท่องเที่ยวชุมชน" id="typ_travelcommu"
+                                                name="typ_travelcommu">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายท่องเที่ยวชุมชน
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="เครือข่ายน้ำภาคตะวันออก" id="typ_eastwater" name="typ_eastwater">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายน้ำภาคตะวันออก
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="เครือข่ายแรงงานภาคตะวันออก" id="typ_eastlabour"
+                                                name="typ_eastlabour">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายแรงงานภาคตะวันออก
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="เครือข่ายจับตาปัญหาขยะ มลพิษและสิ่งแวดล้อมภาคตะวันออก"
+                                                id="typ_eastwaste" name="typ_eastwaste">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายจับตาปัญหาขยะ มลพิษและสิ่งแวดล้อมภาคตะวันออก
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="เครือข่ายคนรุ่นใหม่"
+                                                id="typ_newgen" name="typ_newgen">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายคนรุ่นใหม่
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="เครือข่ายเศรษฐกิจฐานราก" id="typ_ecobase" name="typ_ecobase">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายเศรษฐกิจฐานราก
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="เครือข่ายเกษตรในภาคตะวันออก เช่น กลุ่มเกษตรกรรุ่นใหม่ กลุ่มสวนทุเรียน
+                                            ลำไย นาแปลงใหญ่และอ้อย" id="typ_eastfarmer" name="typ_eastfarmer">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                เครือข่ายเกษตรในภาคตะวันออก เช่น กลุ่มเกษตรกรรุ่นใหม่ กลุ่มสวนทุเรียน
+                                                ลำไย นาแปลงใหญ่และอ้อย
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>ประเภทอื่น ๆ โปรดระบุ</label>
+                                    <input type="tex" class="form-control" id="typ_other" name="typ_other">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>สถานะของกลุ่ม เครือข่าย องค์กร</label>
+                                <select class="form-control" id="orgstatus" name="orgstatus">
+                                    <option value=""></option>
+                                    <option value="ยังขับเคลื่อนอยู่">ยังขับเคลื่อนอยู่</option>
+                                    <option value="หยุดขับเคลื่อน">หยุดขับเคลื่อน</option>
+                                    <option value="เปลี่ยนเป้าหมาย">เปลี่ยนเป้าหมาย</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>เป้าหมาย</label>
+                                <input type="text" class="form-control" id="orgtarget" name="orgtarget">
+                            </div>
+
+                            <div class="form-group">
+                                <label>การทำงานของกลุ่ม เครือข่าย องค์กร</label>
+                                <textarea rows="4" class="form-control" id="orgwork" name="orgwork"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>ผลลัพธ์จากงาน</label>
+                                <textarea rows="4" class="form-control" id="orgoutput" name="orgoutput"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="img">อัพโหลดรูปภาพ</label>
+                                <input type="file" class="form-control-file" id="imgfile" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview" width="100%">
+                                <!-- <img src="" id="ori">
+                                <img src="" id="rez"> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label>ผู้ให้ข้อมูล</label>
+                                <input type="text" class="form-control" id="orgreportor" name="orgreportor">
+                            </div>
+
+                            <!-- <button type="submit" class="btn btn-success">ok</button> -->
+                        </div>
+                    </form>
+                    <hr>
+                    <div class="d-flex justify-content-center">
+
+                        <button class="btn btn-info pull-right m-1" onclick="sendData()"><i class="fa fa-plus"
+                                aria-hidden="true"></i>&nbsp;บันทึกข้อมูล
+                        </button>
+                        <a class="btn btn-light pull-right m-1" href="./../report/"><i
+                                class="fa fa-clipboard"></i>&nbsp;
+                            หน้ารายงาน</a>
+                    </div>
+
+                </div>
+            </div>
+        </section><!-- End Testimonials Section -->
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="background-color: #CACED3;">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright 2021 <strong><span>EnGRIDs by GeoCMU</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: [license-url] -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+                    Designed by <a href="https://engrids.soc.cmu.ac.th">EnGRIDs</a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div class="modal fade bd-example-modal-lg" id="Modalconfirm" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="w3-animate-top">
+                <div class="modal-content">
+                    <div class="modal-header d-flex align-items-center" style="background: #e5e6e5;">
+                        <h4 class="modal-title">
+                            <i class="bi bi-file-earmark-check-fill text-primary mr-2"
+                                style="font-size: 26px;"></i>ยืนยันการบันทึกข้อมูล
+                        </h4>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button> -->
+                    </div>
+                    <div class="modal-body text-center mx-auto">
+                        <p style="font-size: 18px;">ท่านต้องการบันทึกข้อมูลนี้ใช่หรือไม่</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+                        <a href="./../dashboard/index.html" class="btn btn-3bb">ยืนยัน</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- <script src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&amp;version=v2.5"></script> -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v11.0"
+        nonce="gAYMA0dL"></script>
+    <!-- Vendor JS Files -->
+    <script src="./../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="./../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="./../../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./../../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="./../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="./../../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="./../../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="./../../assets/vendor/typed.js/typed.min.js"></script>
+    <script src="./../../assets/vendor/aos/aos.js"></script>
+
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script> -->
+
+
+
+    <!-- Template Main JS File -->
+    <script src="./../../assets/js/main.js"></script>
+    <script type="text/javascript" src="//libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>รายงานนำข้อมูลการประมง</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="./../../assets/img/favicon.png" rel="icon">
+    <link href="./../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- start dooklink -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
+
+    <!--line-awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="./../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="./../../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <!-- Template Main CSS File -->
+    <link href="./../../assets/css/style.css" rel="stylesheet">
+    <link href="./../../assets/fontawesome/css/all.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="https://engrids.soc.cmu.ac.th/eac_cmu/main_eac/index.html"><i class="fas fa-home"></i>
+                        <span>หน้าหลัก</span></a></li>
+                <li><a href="./../../form_demo/dashboard/index.html"><i class="fas fa-bacon"></i>
+                        <span>ความมั่นทางอาหาร</span></a>
+                </li>
+                <li><a href="./../../db_water/index.html"><i class="fas fa-chart-line"></i>
+                        <span>รายงานข้อมูลน้ำผิวดิน</span></a></li>
+                <li><a href="./../../form_organizeV2/report/index.html"><i class="fas fa-users-cog"></i>
+                        <span>กลุ่มเครือข่าย/องค์กร</span></a></li>
+                <!-- <li><a href="#map_eac"><i class="bx bx-layer"></i> <span>ระบบสารสนเทศภูมิศาสตร์เพื่อชุมชน</span></a> -->
+                <li><a href="./../../dashboard_wms/report/index.html"><i class="fas fa-layer-group"></i>
+                        <span>แผนที่ภาพรวม</span></a></li>
+                </li>
+                <li><a href="./../../form_travel/dashboard/index.html"><i class="fas fa-suitcase"></i>
+                        <span>ท่องเที่ยวชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../form_notify/dashboard/index.html"><i class="fas fa-bullhorn"></i>
+                        <span>แจ้งปัญหาสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"> <i class="fas fa-tree"></i>
+                        <span>ทรัพยากรธรรมชาติและสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../form_learning/dashboard/index.html"><i class="fas fa-chalkboard-teacher"></i>
+                        <span>การเรียนรู้บนฐานชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"><i class="fas fa-exclamation-circle"></i>
+                        <span>เฝ้าระวังปัญหาผลกระทบจากมลพิษสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li onclick="gotoDashboard2()"><a href="#"><i class="fas fa-chart-line"></i>
+                        <span>รายงานข้อมูลการประมง</span></a></li>
+                <li class="active"><a href="#fishing"><i class="fa fa-plus"></i>
+                        <span>เพิ่มข้อมูลการประมง</span></a></li>
+
+                <!-- <li><a href="#contact"><i class="bx bx-envelope"></i> <span>ติดต่อ สชอ.</span></a></li> -->
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </header><!-- End Header -->
+
+    <main id="main">
+
+
+        <!-- ======= Testimonials Section ======= -->
+        <section class="section-bg w-100" id="fishing">
+            <div class="container w-100 mw-100">
+                <div class="section-title">
+                    <h2>รายงานนำข้อมูลการประมง</h2>
+                </div>
+                <div class="card p-4 d-flex flex-column mb-4">
+                    <div class="container-fluid">
+                        <h4>การนำเข้าข้อมูลการประมง</h4>
+                        <h6>กรุณาวางมุดตำแหน่งสถานที่ทำการประมงของท่านลงบนแผนที่</h6>
+                        <div class="mt-1 p-0">
+                            <div id="map"></div>
+                        </div>
+                        <h6 class="mt-3"><b>รายละเอียดข้อมูล</b></h6>
+                        <hr>
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 150px;"><b>ค่าพิกัด Lat :</b></span>
+                                    <input type="text" name="lat" class="form-control" id="lat" placeholder="lat">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 150px;"><b>ค่าพิกัด Lng :</b></span>
+                                    <input type="text" class="form-control" name="lng" id="lng" placeholder="lng">
+                                </div>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 250px;"><b>ความแม่นยำ (เมตร):</b></span>
+                                    <input type="text" class="form-control" name="accuracy" id="accuracy"
+                                        placeholder="ความแม่นยำ">
+                                </div>
+                            </div>
+                            <div class="col-md-3 ">
+                                <div class="form-group d-flex flex-row justify-content-around">
+                                    <button type="button" class="btn btn-secondary" onclick="markerlocate()">จับตำแหน่ง
+                                        gps</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="stoplocate()">เก็บค่าพิกัด</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-sm">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 220px;"><b>ชื่อสถานที่/ฟาร์ม :</b></span>
+                                    <input type="text" class="form-control" name="location_name" id="locat_name"
+                                        placeholder="สถานที่/ฟาร์ม">
+                                    <div class="invalid-feedback">
+                                        *ระบุชื่อสถานที่/ฟาร์ม
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 220px;"><b>ที่อยู่/ตั้งฟาร์ม :</b></span>
+                                    <input type="text" class="form-control" name="locationfarm" id="flocation">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 100px;"><b>จังหวัด :</b></span>
+                                    <select class="form-control" id="pro">
+                                        <option value="TH">ทุกจังหวัด</option>
+                                    </select><br>
+                                    <div class="invalid-feedback">
+                                        *ระบุจังหวัด
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 100px;">อำเภอ :</strong>
+                                    <select class="form-control" id="amp">
+                                    </select><br>
+                                    <div class="invalid-feedback">
+                                        *ระบุอำเภอ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 100px;">ตำบล :</strong>
+                                    <select class="form-control" id="tam">
+                                    </select><br>
+                                    <div class="invalid-feedback">
+                                        *ระบุตำบล
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-sm-4 mb-2">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 350px;">ประเภทการทำประมง :</strong>
+                                    <select class="form-control" id="wfishing">
+                                        <option selected>-- แสดงทั้งหมด --</option>
+                                        <option value="น้ำจืด">น้ำจืด</option>
+                                        <option value="น้ำเค็ม">น้ำเค็ม</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 350px;">ประเภทการประกอบการ :</strong>
+                                    <select class="form-control" id="cfishing">
+                                        <option selected>-- แสดงทั้งหมด --</option>
+                                        <option value="ฟาร์มเพาะพันธ์ุและอนุบาล">ฟาร์มเพาะพันธ์ุและอนุบาล</option>
+                                        <option value="ฟาร์มเพาะพันธ์ุ">ฟาร์มเพาะพันธ์ุ</option>
+                                        <option value="ฟาร์มอนุบาล">ฟาร์มอนุบาล</option>
+                                        <option value="ฟาร์มเลี้ยง">ฟาร์มเลี้ยง</option>
+                                        <option value="สถานประกอบการ">สถานประกอบการ</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 350px;">ระยะเวลาการทำประมง (ปี):</strong>
+                                    <input type="number" class="form-control" name="work_year" id="work_year"
+                                        placeholder="ปี">
+
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 350px;">พื้นที่เลี้ยง (ไร่):</strong>
+                                    <input type="number" class="form-control" id="workingspace" placeholder="ไร่">
+
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 350px;">พื้นที่ฟาร์ม (ไร่):</strong>
+                                    <input type="number" class="form-control" name="work_year" id="area"
+                                        placeholder="ไร่">
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <h6><b>มาตรฐานฟาร์มเพาะเลี้ยงสัตว์น้ำ</b></h6>
+                        <hr>
+                        <div class="col-12 mt-2">
+                            <div class="col-sm-12">
+                                <div class="d-flex flex-row align-items-center">
+                                    <input class="form-check-input" name="standard" value="standard1" id="standard1"
+                                        type="radio">
+                                    <label class="form-check-label" for="standard1"
+                                        style="width: 350px;"><strong>มาตรฐานฟาร์มเพาะเลี้ยงสัตว์น้ำ
+                                            GAP และ CoC</strong></label>
+                                    <div class="d-flex flex-column w-100 disabledbox" id="list_standard1">
+                                        <select class="form-control" name="cer_standard" id="cer_standard1">
+                                            <option selected>-- แสดงทั้งหมด --</option>
+                                            <option value="1">CoC กรมประมง</option>
+                                            <option value="2">GAP กรมประมง</option>
+                                            <option value="0">GAP อาเซียน</option>
+                                            <option value="3">GAP มกษ.7401-2552</option>
+                                            <option value="8">GAP มกษ.7401-2557</option>
+                                            <option value="9">GAP มกษ.7422-2553</option>
+                                            <option value="10">ORG มกษ.9000 เล่ม 1-2552</option>
+                                            <option value="11">ORG มกษ.9000 เล่ม 4-2553</option>
+                                            <option value="12">GAP มกษ.9001-2556</option>
+                                            <option value="13">GAP มกษ.4401-2551</option>
+                                            <option value="14">GAP มกษ.4400-2552</option>
+                                            <option value="15">GAP มกษ.4403-2553</option>
+                                            <option value="16">มกษ.7405-2553</option>
+                                            <option value="17">มกษ.7413</option>
+                                            <option value="23">GAP มกษ.7417-2559</option>
+                                            <option value="26">GAP มกษ.7401-2562</option>
+                                            <option value="27">GAP มกษ.7422-2561</option>
+                                            <option value="28">GAP มกษ.7436-2563</option>
+                                            <option value="29">GAP มกษ.7421-2561</option>
+                                            <option value="00">อื่นๆ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <div class="d-flex flex-row align-items-center">
+                                    <input class="form-check-input" name="standard" value="standard2" id="standard2"
+                                        type="radio">
+                                    <label class="form-check-label" for="standard2"
+                                        style="width: 350px;"><strong>มาตรฐาน GMP/HACCP
+                                        </strong></label>
+                                    <div class="d-flex flex-column w-100 disabledbox" id="list_standard2">
+                                        <select class="form-control" name="cer_standard" id="cer_standard2">
+                                            <option selected>-- แสดงทั้งหมด --</option>
+                                            <option value="4">GMP (มกษ.9023-2550)</option>
+                                            <option value="5">HACCP (มกษ.9024-2550)</option>
+                                            <option value="6">GMP Codex</option>
+                                            <option value="7">HACCP Codex</option>
+                                            <option value="17">มกษ.9035-2553</option>
+                                            <option value="18">มกษ.1004-2557</option>
+                                            <option value="19">มกษ.6401-2558</option>
+                                            <option value="20">มกษ.9039-2556</option>
+                                            <option value="21">มกษ.9041-2557</option>
+                                            <option value="22">มกษ.9046-2560</option>
+                                            <option value="24">มกษ.4702-2557</option>
+                                            <option value="25">มกษ.9047-2560</option>
+                                            <option value="30">GMP (มกษ. 9023-2564)</option>
+                                            <option value="31">HACCP (มกษ. 9024-2564)</option>
+                                            <option value="32">GHPs Codex</option>
+                                            <option value="33">มกษ.9035-2563</option>
+                                            <option value="34">มกษ. 4403-2564</option>
+                                            <option value="35">มกษ.2507-2559</option>
+                                            <option value="00">อื่นๆ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 350px;">สถานะการรับรอง:</strong>
+                                    <div class="d-flex flex-column w-100 disabledbox" id="list_flagstatus">
+                                        <select class="form-control" name="flagstatus" id="flagstatus">
+                                            <option selected>-- แสดงทั้งหมด --</option>
+                                            <option value="ACTIVE">ได้รับการรับรอง </option>
+                                            <option value="INACTIVE">ยกเลิกการรับรอง </option>
+                                            <option value="SUSPEND">พักใช้ </option>
+                                            <option value="REVOKE">เพิกถอน </option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <input class="form-check-input" name="standard" value="Nostandard" id="Nostandard"
+                                    type="radio">
+                                <label class="form-check-label" for="Nostandard"><strong>ไม่ได้รับการรับรองมาตรฐาน
+                                    </strong></label>
+                            </div>
+                        </div>
+                        <br>
+                        <h6><b>ระบุชนิดสัตว์น้ำหรือผลิตภัณฑ์ </b></h6>
+                        <hr>
+                        <div class="d-flex flex-column mt-2">
+                            <!-- <textarea name="cate_fishing" id="" cols="30" rows="10"></textarea> -->
+                            <select multiple="multiple" name="app_specie" id="app_specie">
+                                <option value="FARM-SPECIE-3">ปลานิล </option>
+                                <option value="FARM-SPECIE-1">กุ้งทะเล </option>
+                                <option value="FARM-SPECIE-93">สัตว์น้ำจืดรวม </option>
+                                <option value="FARM-SPECIE-94">สัตว์น้ำทะเล </option>
+                                <option value="FARM-SPECIE-2">ปลาดุก </option>
+                                <option value="FARM-SPECIE-5">ปลาหมอ </option>
+                                <option value="FARM-SPECIE-4">ปลาตะเพียน </option>
+                                <option value="FARM-SPECIE-72">ปลาช่อน </option>
+                                <option value="FARM-SPECIE-6">ปลาไน </option>
+                                <option value="FARM-SPECIE-7">ปลาสลิด </option>
+                                <option value="FARM-SPECIE-8">ปลาสวาย-เทโพ </option>
+                                <option value="FARM-SPECIE-96">ปลาจีน </option>
+                                <option value="FARM-SPECIE-9">ปลาไหล </option>
+                                <option value="FARM-SPECIE-10">ปลาทู </option>
+                                <option value="FARM-SPECIE-11">ปลาลัง </option>
+                                <option value="FARM-SPECIE-12">ปลาอินทรี </option>
+                                <option value="FARM-SPECIE-13">ปลาดาบลาว </option>
+                                <option value="FARM-SPECIE-14">ปลาโอดำ </option>
+                                <option value="FARM-SPECIE-15">ปลาโอลาย </option>
+                                <option value="FARM-SPECIE-16">ปลาทูแขก </option>
+                                <option value="FARM-SPECIE-17">ปลาแข้งไก่ </option>
+                                <option value="FARM-SPECIE-18">ปลาสีกุน </option>
+                                <option value="FARM-SPECIE-19">ปลาสีกุนตาโต </option>
+                                <option value="FARM-SPECIE-20">ปลาสำลี </option>
+                                <option value="FARM-SPECIE-21">ปลากุเรา </option>
+                                <option value="FARM-SPECIE-22">ปลาหลังเขียว </option>
+                                <option value="FARM-SPECIE-23">ปลากะตัก </option>
+                                <option value="FARM-SPECIE-24">ปลากระบอก </option>
+                                <option value="FARM-SPECIE-25">ปลาจะละเม็ดดำ </option>
+                                <option value="FARM-SPECIE-26">ปลาจะละเม็ดขาว </option>
+                                <option value="FARM-SPECIE-27">ปลาน้ำดอกไม้ </option>
+                                <option value="FARM-SPECIE-28">ปลาทูน่า </option>
+                                <option value="FARM-SPECIE-29">ปลาจวด </option>
+                                <option value="FARM-SPECIE-30">ปลาทรายแดง </option>
+                                <option value="FARM-SPECIE-31">ปลาทรายขาว </option>
+                                <option value="FARM-SPECIE-32">ปลาปากคม </option>
+                                <option value="FARM-SPECIE-33">ปลาดาบเงิน </option>
+                                <option value="FARM-SPECIE-34">ปลากะพงแดง </option>
+                                <option value="FARM-SPECIE-35">ปลากะพงขาว </option>
+                                <option value="FARM-SPECIE-36">ปลาตาหวาน </option>
+                                <option value="FARM-SPECIE-37">ปลาเห็ดโคน </option>
+                                <option value="FARM-SPECIE-38">ปลาดุกทะเล </option>
+                                <option value="FARM-SPECIE-39">ปลากดทะเล </option>
+                                <option value="FARM-SPECIE-40">ปลากระเบน </option>
+                                <option value="FARM-SPECIE-41">ปลาฉลาม </option>
+                                <option value="FARM-SPECIE-42">ปลาลิ้นหมา </option>
+                                <option value="FARM-SPECIE-43">ปลาจักรผาน </option>
+                                <option value="FARM-SPECIE-44">ปลายอดจาก </option>
+                                <option value="FARM-SPECIE-45">ปลาเก๋า </option>
+                                <option value="FARM-SPECIE-46">ปลากัด </option>
+                                <option value="FARM-SPECIE-103">สัตว์น้ำจืดสวยงาม </option>
+                                <option value="FARM-SPECIE-104">สัตว์น้ำทะเลสวยงาม </option>
+                                <option value="FARM-SPECIE-47">ปลาทะเลสวยงาม </option>
+                                <option value="FARM-SPECIE-48">หมึกกล้วย </option>
+                                <option value="FARM-SPECIE-49">หมึกกระดอง </option>
+                                <option value="FARM-SPECIE-50">หมึกหอม </option>
+                                <option value="FARM-SPECIE-51">หมึกสาย </option>
+                                <option value="FARM-SPECIE-52">หอยแครง </option>
+                                <option value="FARM-SPECIE-53">หอยแมลงภู่ </option>
+                                <option value="FARM-SPECIE-54">หอยนางรม </option>
+                                <option value="FARM-SPECIE-55">หอยกะพง </option>
+                                <option value="FARM-SPECIE-56">หอยลาย </option>
+                                <option value="FARM-SPECIE-57">หอยเชลล์ </option>
+                                <option value="FARM-SPECIE-58">กุ้งก้ามกราม </option>
+                                <option value="FARM-SPECIE-59">กุ้งตะกาด </option>
+                                <option value="FARM-SPECIE-60">กุ้งแชบ๊วย </option>
+                                <option value="FARM-SPECIE-61">กุ้งกุลาดำ Giant </option>
+                                <option value="FARM-SPECIE-62">กุ้งกุลาลาย </option>
+                                <option value="FARM-SPECIE-63">กุ้งเหลือง </option>
+                                <option value="FARM-SPECIE-64">กุ้งโอคัก </option>
+                                <option value="FARM-SPECIE-65">กุ้งขาวแวนนาไม </option>
+                                <option value="FARM-SPECIE-66">เคย </option>
+                                <option value="FARM-SPECIE-67">กุ้งน้ำจืด </option>
+                                <option value="FARM-SPECIE-68">กั้งกระดาน </option>
+                                <option value="FARM-SPECIE-69">กั้งตั๊กแตน </option>
+                                <option value="FARM-SPECIE-70">ปูม้า </option>
+                                <option value="FARM-SPECIE-71">ปูทะเล </option>
+                                <option value="FARM-SPECIE-73">จระเข้น้ำจืด </option>
+                                <option value="FARM-SPECIE-74">จระเข้น้ำเค็ม </option>
+                                <option value="FARM-SPECIE-75">ตะพาบน้ำ </option>
+                                <option value="FARM-SPECIE-76">เต่า </option>
+                                <option value="FARM-SPECIE-77">กบ </option>
+                                <option value="FARM-SPECIE-78">ปลิง </option>
+                                <option value="FARM-SPECIE-79">แมงกะพรุน </option>
+                                <option value="FARM-SPECIE-80">สาหร่ายน้ำจืด </option>
+                                <option value="FARM-SPECIE-81">สาหร่ายทะเล </option>
+                                <option value="FARM-SPECIE-82">เพรียง </option>
+                                <option value="FARM-SPECIE-83">เนื้อปลาสด (รวมปลา) </option>
+                                <option value="FARM-SPECIE-84">เนื้อปลาสุก (รวมปลา) </option>
+                                <option value="FARM-SPECIE-85">อาหารทะเลสด </option>
+                                <option value="FARM-SPECIE-86">อาหารทะเลสุก </option>
+                                <option value="FARM-SPECIE-87">อาหารทะเลแช่เย็น </option>
+                                <option value="FARM-SPECIE-88">อาหารทะเลแช่แข็ง </option>
+                                <option value="FARM-SPECIE-89">ปลาเป็ด </option>
+                                <option value="FARM-SPECIE-90">ซูริมิ </option>
+                                <option value="FARM-SPECIE-91">สัตว์น้ำแปรรูปอินทรีย์ </option>
+                                <option value="FARM-SPECIE-92">อาหารสัตว์น้ำ </option>
+                                <option value="FARM-SPECIE-95">สัตว์น้ำรวม </option>
+                                <option value="FARM-SPECIE-99">ปลากดเหลือง </option>
+                                <option value="FARM-SPECIE-97">กุ้งเครย์ฟิช </option>
+                                <option value="FARM-SPECIE-98">แม่เพรียง </option>
+                                <option value="FARM-SPECIE-102">ปลายี่สก </option>
+                                <option value="FARM-SPECIE-101">ปลากราย </option>
+                                <option value="FARM-SPECIE-100">ปลานวลจันทร์ทะเล </option>
+                            </select>
+                            <strong id="wreview"></strong>
+
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-3">
+                        <h6><b>อัพโหลดรูปภาพประกอบ</b></h6>
+                        <hr>
+                        <div class="row">
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพการประมง 1</label>
+                                <input type="file" class="form-control-file" id="imgfile" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview" width="50%">
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพการประมง 2</label>
+                                <input type="file" class="form-control-file" id="imgfile2" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview2" width="50%">
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพการประมง 3</label>
+                                <input type="file" class="form-control-file" id="imgfile3" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview3" width="50%">
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพการประมง 4</label>
+                                <input type="file" class="form-control-file" id="imgfile4" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview4" width="50%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-success" type="button" id="button" onclick="chkData()">
+                    <!-- <i class="bi bi-save"></i> -->
+                    <lord-icon src="https://cdn.lordicon.com/itykargr.json" trigger="loop-on-hover"
+                        colors="primary:#ffffff" style="width:32px;height:32px">
+                    </lord-icon>
+                    &nbsp;บันทึก
+                </button>&nbsp;&nbsp;
+            </div>
+            <!-- <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-light">กลับไปหน้าหลัก</button>
+                </div> -->
+            </div>
+        </section><!-- End Testimonials Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="background-color: #CACED3;">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright 2021 <strong><span>EnGRIDs by GeoCMU</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: [license-url] -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+                    Designed by <a href="https://engrids.soc.cmu.ac.th">EnGRIDs</a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
+
+    <div class="modal fade" id="chkgeommodal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="w3-animate-top"></div>
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <i class="bi bi-x-square-fill text-danger mr-2"
+                            style="font-size: 26px;"></i>บันทึกข้อมูลไม่สำเร็จ
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <br>
+                    <lord-icon src="https://cdn.lordicon.com/vfzqittk.json" trigger="loop" colors="primary:#c71f16"
+                        state="intro" delay="10" style="width:100px;height:100px">
+                    </lord-icon>
+                    <p style="font-size: 18px;  ">กรุณาวาง<b>จุด Location</b> ฟาร์มเพาะเลี้ยงของท่าน ลงบนแผนที่</p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirmModal">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <!-- <div class="w3-animate-top"></div> -->
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <i class="bi bi-file-earmark-check-fill text-success mr-2" style="font-size: 26px;"></i>
+                        ยืนยันการบันทึกข้อมูล
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <br>
+                    <lord-icon src="https://cdn.lordicon.com/biwxmlnf.json" trigger="loop" colors="primary:#b4b4b4"
+                        style="width:65px;height:65px">
+                    </lord-icon>
+                    <p style="font-size: 18px;">ท่านต้องการบันทึกข้อมูลนี้
+                        <!-- <b><span id="projName"></span><br><span id="projTime"></span> 
+                        </b>--> ใช่หรือไม่?
+                    </p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="postData()">ยืนยัน</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteModal">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <!-- <div class="w3-animate-top"></div> -->
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <i class="bi bi-file-earmark-check-fill text-danger mr-2"
+                            style="font-size: 26px;"></i>ยืนยันการลบข้อมูล
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <br>
+                    <p style="font-size: 18px;">ท่านต้องการลบข้อมูล
+                        <b><span id="projName"></span><br><span id="projTime"></span>
+                        </b> ใช่หรือไม่?
+                    </p>
+                    <input type="hidden" id="projId">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="deleteValue()">ยืนยัน</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://cdn.datatables.net/plug-ins/1.11.1/dataRender/datetime.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/spiritedaway.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/moonrisekingdom.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <!-- Vendor JS Files -->
+    <!-- <script src="./../../assets/vendor/jquery/jquery.min.js"></script> -->
+    <script src="./../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="./../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="./../../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./../../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="./../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="./../../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="./../../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="./../../assets/vendor/typed.js/typed.min.js"></script>
+    <script src="./../../assets/vendor/aos/aos.js"></script>
+    <script src="./../../assets/vendor/aos/aos.js"></script>
+    <!-- Template Main JS File -->
+    <script src="./../../../eac_cmu/main_eac/assets/js/main.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

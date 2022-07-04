@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>ลงทะเบียน</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+
+    <!-- <link href="./assets/css/paper-kit.css?v=2.2.0" rel="stylesheet" /> -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid  mt-1 mb-1">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div id="card">
+                        <img alt="" id="profile">
+                    </div>
+
+                </div>
+                <div class="col-xs-4 ml-1">
+                    <h5> <span class="badge badge-info" id="displayName"></span></h5>
+                    <span id="statusMessage"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+        <span id="userId"></span>
+        <form id="fieldForm">
+            <div class="form-group">
+                <h5>ชื่อ-นามสกุล:</h5>
+                <input type="text" class="form-control" id="usrname" required
+                    oninvalid="this.setCustomValidity('กรุณาใส่กรอกชื่อ')">
+            </div>
+            <div class="form-group">
+                <h5>เบอร์โทรศัพท์:</h5>
+                <input type="text" class="form-control" id="tele" required
+                    oninvalid="this.setCustomValidity('กรุณาใส่เบอร์โทร')">
+            </div>
+            <div class="form-group">
+                <h5>อีเมล์:</h5>
+                <input type="email" class="form-control" id="email">
+            </div>
+
+            <div class="form-group">
+                <label>จังหวัด:</label>
+                <select class="form-control" id="pro" onchange="getAmp(this.value)">
+                    <option value=""></option>
+                    <option value="22">จันทบุรี</option>
+                    <option value="24">ฉะเชิงเทรา</option>
+                    <option value="20">ชลบุรี</option>
+                    <option value="23">ตราด</option>
+                    <option value="26">นครนายก</option>
+                    <option value="25">ปราจีนบุรี</option>
+                    <option value="21">ระยอง</option>
+                    <option value="27">สระแก้ว</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>อำเภอ:</label>
+                <select class="form-control" id="amp" onchange="getTam(this.value)"></select>
+            </div>
+
+            <div class="form-group">
+                <label>ตำบล:</label>
+                <select class="form-control" id="tam" onchange="getTamOne(this.value)"></select>
+            </div>
+
+            <input type="hidden" id="pro_name">
+            <input type="hidden" id="amp_name">
+            <input type="hidden" id="tam_name">
+
+            <div class="form-group">
+                <h5>อาชีพ: </h5>
+                <select class="form-control" id="ocup">
+                    <option value="ข้าราชการ">รับราชการ</option>
+                    <option value="พนักงานรัฐวิสาหกิจ">พนักงานรัฐวิสาหกิจ</option>
+                    <option value="พนักงานรัฐวิสาหกิจ">เกษตรกร</option>
+                    <option value="นักเรียน-นักศึกษา">นักเรียน-นักศึกษา</option>
+                    <option value="บุคลทั่วไป">บุคลทั่วไป</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h5>เพศ:</h5>
+                <select class="form-control" id="sex">
+                    <option value="ชาย" selected>ชาย</option>
+                    <option value="หญิง">หญิง</option>
+                    <option value="ไม่ระบุ">ไม่ระบุ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h5>กรุณาเลือกโมดูลที่ต้องการเข้าร่วมเป็นเครือข่ายนำเข้าข้อมูล: (สามารถเลือกได้มากกว่า 1 ข้อ)</h5>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="ความหลากหลายทางชีวภาพ" id="biodiversity">
+                        ความหลากหลายทางชีวภาพ
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="พื้นที่สีเขียว" id="greenArea">
+                        พื้นที่สีเขียว
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="ป่าครอบครัว" id="hforest">
+                        ป่าครอบครัว
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="เกษตรอินทรีย์" id="organic">
+                        เกษตรอินทรีย์
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="คุณภาพอากาศ" id="airQua">
+                        คุณภาพอากาศ
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="คุณภาพน้ำ" id="watQua">
+                        คุณภาพน้ำ
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="ปริมาณน้ำ" id="watLev">
+                        ปริมาณน้ำ
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="ปัญหาด้านสิ่งแวดล้อม" id="notice">
+                        แจ้งปัญหาด้านสิ่งแวดล้อม
+                        <span class="form-check-sign"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h5>ต้องการได้รับการอบรมในการนำเข้าข้อมูล: </h5>
+                <label><input type="radio" name="workshop" value="yes" checked> ต้องการ </label>
+                <br>
+                <label><input type="radio" name="workshop" value="no"> ไม่ต้องการ</label>
+            </div>
+            <div class="mt-1">
+                <button type="submit" class="btn btn-secondary" id="button">
+                    <span id='n'>&nbsp;บันทึก</span>
+                </button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-warning" id="refresh" onclick="refreshPage()">
+                    <span>&nbsp;เริ่มใหม่</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal fade" id="modal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>ลงทะเบียนสำเร็จ </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                        onclick="closeLiff()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <p></p>
+    <p></p>
+    <hr>
+</body>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="./app.js"></script>
+
+</html>

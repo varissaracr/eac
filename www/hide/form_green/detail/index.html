@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- ชื่อเพจ -->
+    <title>ระบบนำเข้าข้อมูลพื้นที่สีเขียว</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- start dooklink -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- end dooklink -->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+
+    <!-- Favicons -->
+    <link href="./../assets/img/favicon.png" rel="icon">
+    <link href="./../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <link href="./../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="./../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="./../assets/css/style.css">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+
+    <link href="./style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- .nav-menu -->
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="./../../main_eac/index.html">กลับหน้าหลัก</a></li>
+                </ul>
+            </nav>
+
+
+            <!-- social icon -->
+            <div class="header-social-links">
+                <!-- <a href="#" class="twitter"><i class="icofont-twitter"></i></a> -->
+                <a href="https://www.facebook.com/EECENV" class="facebook"><i class="icofont-facebook"></i></a>
+                <!-- <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a> -->
+            </div>
+
+        </div>
+
+    </header><!-- End Header -->
+    <br>
+    <br>
+    <main id="main">
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>ระบบนำเข้าข้อมูลพื้นที่สีเขียว</h2>
+
+                    </div>
+                    <!-- ใส่แผนที่ -->
+                    <div class="container">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <!-- รับค่า ID Line -->
+                                    <div id="card">
+                                        <img alt="" id="profile">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ฟอร์มนำเข้า -->
+                <hr>
+                <div class="mt-3 mb-20" data-aos="fade-up">
+                    <h4>กรุณานำเข้าพื้นที่สีเขียว </h4>
+
+                    <div class="form-group">
+                        <h6 for="">เริ่มวาดขอบเขตแผนที่สีเขียวโดยคลิกที่ไอคอนรูปสีเหลี่ยมหรือสามเหลี่ยมและคลิกบนแผนที่
+                        </h6>
+                        <div class="card" id="map"></div>
+                    </div>
+                    <div id="form" data-aos="fade-up">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <h6>ชื่อพื้นที่สีเขียว</h6>
+                                    <input type="text" class="form-control" id="gr_name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>จังหวัด</label>
+                                    <select class="form-control" id="pro" onchange="getAmp(this.value)">
+                                        <option value=""></option>
+                                        <option value="22">จันทบุรี</option>
+                                        <option value="24">ฉะเชิงเทรา</option>
+                                        <option value="20">ชลบุรี</option>
+                                        <option value="23">ตราด</option>
+                                        <option value="26">นครนายก</option>
+                                        <option value="25">ปราจีนบุรี</option>
+                                        <option value="21">ระยอง</option>
+                                        <option value="27">สระแก้ว</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>อำเภอ</label>
+                                    <select class="form-control" id="amp" onchange="getTam(this.value)"></select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>ตำบล</label>
+                                    <select class="form-control" id="tam" onchange="getTamOne(this.value)"></select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="hidden" id="pro_name">
+                                <input type="hidden" id="amp_name">
+                                <input type="hidden" id="tam_name">
+
+
+                                <div class="form-group">
+                                    <label for="type">ประเภทพื้นที่สีเขียว &nbsp;(<a
+                                            href="http://thaigreenurban.onep.go.th/frmTassaban.aspx">คลิ๊กดูรายละเอียดของพื้นที่สีเขียวแต่ละประเภท</a>)</label>
+                                    <select class="form-control" id="type" required>
+                                        <option value=""></option>
+                                        <option value="ประเภทที่1">พื้นที่สีเขียวเพื่อการบริการ สาธารณะ</option>
+                                        <option value="ประเภทที่2">พื้นที่สีเขียวเพื่ออรรถประโยชน์</option>
+                                        <option value="ประเภทที่3">พื้นที่สีเขียวริ้วยาวตามแนวสาธารณูปการ</option>
+                                        <option value="ประเภทที่4">พื้นที่สีเขียวเพื่อเศรษฐกิจชุมชน</option>
+                                        <option value="ประเภทที่5">พื้นที่สีเขียวธรรมชาติ </option>
+                                        <option value="ประเภทที่6">พื้นที่สีเขียวที่ยังไม่มีการใช้ประโยชน์หรือรอการพัฒนา
+                                        </option>
+                                    </select>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label>เนื้อที่ (ไร่)</label>
+                                    <input type="number" class="form-control" id="rai">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>จำนวนต้นไม้ (ต้น)</label>
+                                    <input type="number" class="form-control" id="tree">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>หน่วยงานที่รับผิดชอบดูแล</label>
+                                    <input type="text" class="form-control" id="agency">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="mt-1">
+                            <button class="btn btn-success" id="button"
+                                onclick="sendData()">&nbsp;บันทึก</button>&nbsp;&nbsp;
+                            <button class="btn btn-light" id="refresh"
+                                onclick="gotoList()">&nbsp;หน้ารายงาน</button>&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Services Section -->
+        <!-- ฝากใส่วันที่ปรับปรุงด้วยนะคะ -->
+        <div class="container mt-3">
+            <p> <span class="ver">ปรับปรุง 23/03/2021</span></p>
+        </div>
+    </main><!-- End #main -->
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright 2021 <strong><span>EnGRIDs by GeoCMU</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
+                Designed by <a href="https://engrids.soc.cmu.ac.th/">EnGRIDs</a>
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+    <div class="modal fade" id="okmodal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span id="notify"></span>แก้ไขข้อมูลสำเร็จ
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal" onclick="gotoList()">ตกลง</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>กรุณาวาดแปลงพื้นที่สีเขียว</p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="./../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="./../assets/vendor/php-email-form/validate.js"></script>
+    <script src="./../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="./../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="./../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="./../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="./../assets/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="./../assets/js/main.js"></script>
+
+    <!-- start dooklink -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="app.js"></script>
+    <!-- end dooklink -->
+
+</body>
+
+</html>

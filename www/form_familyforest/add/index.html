@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>รายงานนำข้อมูลป่าครอบครัว</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="./../../assets/img/favicon.png" rel="icon">
+    <link href="./../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- start dooklink -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
+
+    <!--line-awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="./../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="./../../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <!-- Template Main CSS File -->
+    <link href="./../../assets/css/style.css" rel="stylesheet">
+    <link href="./../../assets/fontawesome/css/all.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="https://engrids.soc.cmu.ac.th/eac_cmu/main_eac/index.html"><i class="fas fa-home"></i>
+                        <span>หน้าหลัก</span></a></li>
+                <li><a href="./../../form_demo/dashboard/index.html"><i class="fas fa-bacon"></i>
+                        <span>ความมั่นทางอาหาร</span></a>
+                </li>
+                <li><a href="./../../db_water/index.html"><i class="fas fa-chart-line"></i>
+                        <span>รายงานข้อมูลน้ำผิวดิน</span></a></li>
+                <li><a href="./../../form_organizeV2/report/index.html"><i class="fas fa-users-cog"></i>
+                        <span>กลุ่มเครือข่าย/องค์กร</span></a></li>
+                <!-- <li><a href="#map_eac"><i class="bx bx-layer"></i> <span>ระบบสารสนเทศภูมิศาสตร์เพื่อชุมชน</span></a> -->
+                <li><a href="./../../dashboard_wms/report/index.html"><i class="fas fa-layer-group"></i>
+                        <span>แผนที่ภาพรวม</span></a></li>
+                </li>
+                <li><a href="./../../form_travel/dashboard/index.html"><i class="fas fa-suitcase"></i>
+                        <span>ท่องเที่ยวชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../form_notify/dashboard/index.html"><i class="fas fa-bullhorn"></i>
+                        <span>แจ้งปัญหาสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"> <i class="fas fa-tree"></i>
+                        <span>ทรัพยากรธรรมชาติและสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../form_learning/dashboard/index.html"><i class="fas fa-chalkboard-teacher"></i>
+                        <span>การเรียนรู้บนฐานชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"><i class="fas fa-exclamation-circle"></i>
+                        <span>เฝ้าระวังปัญหาผลกระทบจากมลพิษสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li onclick="gotoDashboard2()"><a href="#"><i class="fas fa-chart-line"></i>
+                        <span>รายงานข้อมูลป่าครอบครัว</span></a></li>
+                <li class="active"><a href="#familyforest"><i class="fa fa-plus"></i>
+                        <span>เพิ่มข้อมูลป่าครอบครัว</span></a></li>
+
+                <!-- <li><a href="#contact"><i class="bx bx-envelope"></i> <span>ติดต่อ สชอ.</span></a></li> -->
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </header><!-- End Header -->
+
+    <main id="main">
+
+
+        <!-- ======= Testimonials Section ======= -->
+        <section class="section-bg w-100" id="familyforest">
+            <div class="container w-100 mw-100">
+                <div class="section-title">
+                    <h2>รายงานนำข้อมูลป่าครอบครัว</h2>
+                </div>
+                <div class="card p-4 d-flex flex-column mb-4">
+                    <div class="container-fluid">
+                        <h4>การนำเข้าข้อมูลแปลงพื้นที่ป่าครอบครัว</h4>
+                        <h6>กรุณาวาดแปลงพื้นที่ป่าครอบครัวของท่านลงบนแผนที่ เพื่อนำเข้ารายละเอียดของป่าครอบครัว</h6>
+                        <div class="mt-1 p-0">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-2">
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <label for="patient">ชื่อเจ้าของแปลงพื้นที่:</label><br>
+                                <input type="text" class="form-control" id="fname" disabled>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="location">ขนาด (ไร่):</label><br>
+                                <input type="number" step="any" class="form-control" id="frai">
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <!-- <h3><span class="badge badge-primary">ประเภทเอกสารสิทธิ์ </span></h3> -->
+                                    <label for="">ประเภทเอกสารสิทธิ์:</label><br>
+                                    <select class="form-control" id="flandtype">
+                                        <option value="โฉนด/นส3ก/นส4ฯ">โฉนด/นส3ก/นส4ฯ</option>
+                                        <option value="สปก./สทก">สปก./สทก</option>
+                                        <option value="ไม่มี/ภบท/อื่น">ไม่มี/ภบท/อื่น</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 80px;"><b>ที่อยู่ :</b></span>
+                                    <input type="text" class="form-control" name="location" id="flocation">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="d-flex flex-row align-items-center">
+                                    <span style="width: 100px;"><b>จังหวัด :</b></span>
+                                    <select class="form-control" id="pro">
+                                        <option value="TH">ทุกจังหวัด</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 100px;">อำเภอ :</strong>
+                                    <select class="form-control" id="amp">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong style="width: 100px;">ตำบล :</strong>
+                                    <select class="form-control" id="tam">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-1">
+                        <h6 class="text-center">เลือกชนิดพืชที่พบในพื้นที่แปลงป่าครอบครัว (เลือกได้มากกว่า 1 ชนิด)</h6>
+                        <hr>
+                        <div class="row ml-2">
+                            <div class="form-check col-sm">
+                                <div class="container">
+                                    <!-- <strong>Select Language:</strong> -->
+                                    <!-- <select id="MultipleCheckboxes" multiple="multiple">
+                                        <optgroup label="Group A">
+                                            <option value="ขมิ้นชัน (ขมิ้นแกง)">ขมิ้นชัน (ขมิ้นแกง)</option>
+                                            <option value="ว่านหางจระเข้">ว่านหางจระเข้</option>
+                                            <option value="ย่านาง (เถาย่านาง)">ย่านาง (เถาย่านาง)</option>
+                                            <option value="รางจืด">รางจืด</option>
+                                            <option value="กระชาย (กระชายเหลือง)">กระชาย (กระชายเหลือง)</option>
+                                            <option value="ปลาไหลเผือก (ตงกัตอาลี)">ปลาไหลเผือก (ตงกัตอาลี)</option>
+                                            <option value="รากสามสิบ (สาวร้อยผัว)">รากสามสิบ (สาวร้อยผัว)</option>
+                                            <option value="อบเชย">อบเชย</option>
+                                            <option value="ฟ้าทะลายโจร">ฟ้าทะลายโจร</option>
+                                            <option value="ถั่งเช่า (ตังถั่งเช่า)">ถั่งเช่า (ตังถั่งเช่า)</option>
+                                            <option value="บัวบก">บัวบก</option>
+                                            <option value="ลูกใต้ใบ (หญ้าใต้ใบ)">ลูกใต้ใบ (หญ้าใต้ใบ)</option>
+                                            <option value="งาดำ">งาดำ</option>
+                                            <option value="ชาเขียว">ชาเขียว</option>
+                                            <option value="กัญชา">กัญชา</option>
+                                            <option value="กระเจี๊ยบแดง">กระเจี๊ยบแดง</option>
+                                            <option value="หญ้าหวาน">หญ้าหวาน</option>
+                                            <option value="ว่านชักมดลูก">ว่านชักมดลูก</option>
+                                            <option value="เจียวกู่หลาน">เจียวกู่หลาน</option>
+                                            <option value="บอระเพ็ด">บอระเพ็ด</option>
+                                            <option value="กระชายดำ">กระชายดำ</option>
+                                            <option value="ผักคาวตอง (พลูคาว)">ผักคาวตอง (พลูคาว)</option>
+                                            <option value="เพชรสังฆาต">เพชรสังฆาต</option>
+                                            <option value="กวาวเครือขาว">กวาวเครือขาว</option>
+                                            <option value="การบูรฝาง (ฝางเสน)">การบูรฝาง (ฝางเสน)</option>
+                                            <option value="ว่านดอกทอง (ว่านรากราคะ)">ว่านดอกทอง (ว่านรากราคะ)</option>
+                                            <option value="โสมเกาหลี">โสมเกาหลี</option>
+                                        </optgroup>
+                                    </select>
+                                    <br>
+                                    <strong id="w0review"></strong> -->
+                                </div>
+                                <input class="form-check-input" type="checkbox" id="checkEat">
+                                <label class="form-check-label" for="inlineCheckbox1">พืชกินได้</label>
+                                <div class="d-flex flex-column disabledbox" id="boxEat">
+                                    <select multiple="multiple" id="eat_plant_list">
+                                        <optgroup label="────────────────────">
+                                            <option value="กะเพรา">กะเพรา</option>
+                                            <option value="กระเจี๊ยบเขียว">กระเจี๊ยบเขียว</option>
+                                            <option value="กระเทียม">กระเทียม</option>
+                                            <option value="แครอท">แครอท</option>
+                                            <option value="ตะไคร้">ตะไคร้</option>
+                                            <option value="ตำลึง">ตำลึง</option>
+                                            <option value="แตงกวา">แตงกวา</option>
+                                            <option value="บีทรูท">บีทรูท</option>
+                                            <option value="ผักบุ้ง"> ผักบุ้ง</option>
+                                            <option value="ฟักข้าว">ฟักข้าว</option>
+                                            <option value="ฟักทอง">ฟักทอง</option>
+                                            <option value="มะกรูด">มะกรูด</option>
+                                            <option value="มะเขือเปราะ">มะเขือเปราะ</option>
+                                            <option value="มะเขือเทศ">มะเขือเทศ</option>
+                                            <option value="มะละกอ">มะละกอ</option>
+                                            <option value="มะรุม">มะรุม</option>
+                                            <option value="มะระขี้นก">มะระขี้นก</option>
+                                            <option value="สะตอ">สะตอ</option>
+                                            <option value="โหระพา">โหระพา</option>
+                                            <option value="อัญชัน">อัญชัน</option>
+                                        </optgroup>
+                                    </select>
+                                    <strong id="w1review"></strong>
+                                    <!-- <p></p>
+                                    <span
+                                        class="badge badge-light text-danger fk-14">*หากไม่พบชื่อพืชที่ต้องการกรุณากรอกเพิ่ม</span>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="newitem_eat_plant_list"
+                                            placeholder="กรอกชื่อพืชเข้าในตัวเลือก">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-info" type="button"
+                                                onclick="addEatList()">เพิ่มตัวเลือก</button>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="form-check col-sm">
+                                <input class="form-check-input" type="checkbox" id="checkUse">
+                                <label class="form-check-label" for="inlineCheckbox2">พืชใช้สอย</label>
+                                <div class="d-flex flex-column disabledbox" id="boxUse">
+                                    <select multiple="multiple" id="use_plant_list">
+                                        <optgroup label="────────────────────">
+                                            <option value="สัก">สัก</option>
+                                            <option value="มะขามเทศ">มะขามเทศ</option>
+                                            <option value="ขี้เหล็ก">ขี้เหล็ก</option>
+                                            <option value="บานไม่รู้โรย">บานไม่รู้โรย</option>
+                                            <option value="บัวดิน">บัวดิน</option>
+                                            <option value="ว่านสี่ทิศ">ว่านสี่ทิศ</option>
+                                        </optgroup>
+                                    </select>
+                                    <strong id="w2review"></strong>
+                                    <!-- <p></p>
+                                    <span
+                                        class="badge badge-light text-danger fk-14">*หากไม่พบชื่อพืชที่ต้องการกรุณากรอกเพิ่ม</span>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="newitem_use_plant_list"
+                                            placeholder="กรอกชื่อพืชเข้าในตัวเลือก">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-info" type="button"
+                                                onclick="addUseList()">เพิ่มตัวเลือก</button>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="form-check col-sm">
+                                <input class="form-check-input" type="checkbox" id="checkEcon">
+                                <label class="form-check-label" for="inlineCheckbox2">พืชเศรษฐกิจ</label>
+                                <div class="d-flex flex-column disabledbox" id="boxEcon">
+                                    <select multiple="multiple" id="econ_plant_list">
+                                        <optgroup label="────────────────────"></optgroup>
+                                        <optgroup label="พืชไร่">
+                                            <option value="ข้าว">ข้าว</option>
+                                            <option value="ข้าวโพด">ข้าวโพด</option>
+                                            <option value="ข้าวโอ๊ต">ข้าวโอ๊ต</option>
+                                            <option value="ข้าวสาลี">ข้าวสาลี</option>
+                                            <option value="ข้าวฟ่าง">ข้าวฟ่าง</option>
+                                            <option value="ข้าวบาร์เลย์">ข้าวบาร์เลย์</option>
+                                            <!-- <option value="ปาล์มน้ำมัน">ปาล์มน้ำมัน</option> -->
+                                            <option value="อ้อย">อ้อย</option>
+                                            <option value="ฝ้าย">ฝ้าย</option>
+                                            <option value="ปอ">ปอ</option>
+                                            <option value="ป่าน">ป่าน</option>
+                                            <!-- <option value="กล้วย">กล้วย</option>
+                                            <option value="มะพร้าว">มะพร้าว</option>
+                                            <option value="สับปะรด">สับปะรด</option> -->
+                                            <option value="มันสำปะหลัง">มันสำปะหลัง </option>
+                                            <option value="มันแกว">มันแกว</option>
+                                            <option value="มันเทศ">มันเทศ</option>
+                                            <option value="มันฝรั่ง">มันฝรั่ง</option>
+                                            <option value="เผือก">เผือก</option>
+                                            <option value="หญ้ากีนี">หญ้ากีนี</option>
+                                            <option value="ชา">ชา</option>
+                                            <option value="กาแฟ">กาแฟ</option>
+                                            <option value="ยาสูบ">ยาสูบ</option>
+                                            <option value="ถั่วเหลือง">ถั่วเหลือง</option>
+                                            <option value="ถั่วเขียว">ถั่วเขียว</option>
+                                            <option value="ถั่วลิสง">ถั่วลิสง</option>
+                                            <option value="ทานตะวัน">ทานตะวัน</option>
+                                            <option value="งา">งา</option>
+                                            <option value="ละหุ่ง">ละหุ่ง</option>
+                                            <option value="คำฝอย">คำฝอย</option>
+                                            <option value="ฟ้าทะลายโจร">ฟ้าทะลายโจร</option>
+                                        </optgroup>
+                                        <option disabled>────────────────────</option>
+                                        <optgroup label="พืชสวน">
+                                            <option value="ปาล์มน้ำมัน">ปาล์มน้ำมัน</option>
+                                            <option value="พริกไทย">พริกไทย</option>
+                                            <option value="ส้มเขียวหวาน">ส้มเขียวหวาน</option>
+                                            <option value="มะนาว">มะนาว</option>
+                                            <option value="ลำไย">ลำไย</option>
+                                            <option value="ลิ้นจี่">ลิ้นจี่</option>
+                                            <option value="กล้วย">กล้วย</option>
+                                            <option value="มะพร้าว">มะพร้าว</option>
+                                            <option value="สับปะรด">สับปะรด</option>
+                                        </optgroup>
+                                        <option disabled>────────────────────</option>
+                                        <optgroup label="ไม้เศรษฐกิจ">
+                                            <option value="ไม้ยางพารา">ไม้ยางพารา</option>
+                                            <option value="ไม้เต็ง">ไม้เต็ง</option>
+                                            <option value="ไม้รัง">ไม้รัง</option>
+                                            <option value="ไม้มะฮอกกานี">ไม้มะฮอกกานี</option>
+                                            <option value="ไม้ไผ่">ไม้ไผ่</option>
+                                            <option value="ไม้ยูคาลิปตัส">ไม้ยูคาลิปตัส</option>
+                                        </optgroup>
+                                        <option disabled>────────────────────</option>
+                                        <optgroup label="ไม้ดอก">
+                                            <option value="กล้วยไม้ ">กล้วยไม้ </option>
+                                        </optgroup>
+                                    </select>
+                                    <strong id="w3review"></strong>
+                                    <!-- <p></p>
+                                    <span
+                                        class="badge badge-light text-danger fk-14">*หากไม่พบชื่อพืชที่ต้องการกรุณากรอกเพิ่ม</span>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="newitem_econ_plant_list"
+                                            placeholder="กรอกชื่อพืชเข้าในตัวเลือก">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-info" type="button"
+                                                onclick="addEconList()">เพิ่มตัวเลือก</button>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="form-check col-sm">
+                                <input class="form-check-input" type="checkbox" id="checkHerb">
+                                <label class="form-check-label" for="inlineCheckbox2">พืชสมุนไพร</label>
+                                <div class="d-flex flex-column disabledbox" id="boxHerb">
+                                    <select multiple="multiple" id="herb_plant_list">
+                                        <optgroup label="────────────────────">
+                                            <option value="ขมิ้นชัน (ขมิ้นแกง)">ขมิ้นชัน (ขมิ้นแกง)</option>
+                                            <option value="ว่านหางจระเข้">ว่านหางจระเข้</option>
+                                            <option value="ย่านาง (เถาย่านาง)">ย่านาง (เถาย่านาง)</option>
+                                            <option value="รางจืด">รางจืด</option>
+                                            <option value="กระชาย (กระชายเหลือง)">กระชาย (กระชายเหลือง)</option>
+                                            <option value="ปลาไหลเผือก (ตงกัตอาลี)">ปลาไหลเผือก (ตงกัตอาลี)</option>
+                                            <option value="รากสามสิบ (สาวร้อยผัว)">รากสามสิบ (สาวร้อยผัว)</option>
+                                            <option value="อบเชย">อบเชย</option>
+                                            <option value="ฟ้าทะลายโจร">ฟ้าทะลายโจร</option>
+                                            <option value="ถั่งเช่า (ตังถั่งเช่า)">ถั่งเช่า (ตังถั่งเช่า)</option>
+                                            <option value="บัวบก">บัวบก</option>
+                                            <option value="ลูกใต้ใบ (หญ้าใต้ใบ)">ลูกใต้ใบ (หญ้าใต้ใบ)</option>
+                                            <option value="งาดำ">งาดำ</option>
+                                            <option value="ชาเขียว">ชาเขียว</option>
+                                            <option value="กัญชา">กัญชา</option>
+                                            <option value="กระเจี๊ยบแดง">กระเจี๊ยบแดง</option>
+                                            <option value="หญ้าหวาน">หญ้าหวาน</option>
+                                            <option value="ว่านชักมดลูก">ว่านชักมดลูก</option>
+                                            <option value="เจียวกู่หลาน">เจียวกู่หลาน</option>
+                                            <option value="บอระเพ็ด">บอระเพ็ด</option>
+                                            <option value="กระชายดำ">กระชายดำ</option>
+                                            <option value="ผักคาวตอง (พลูคาว)">ผักคาวตอง (พลูคาว)</option>
+                                            <option value="เพชรสังฆาต">เพชรสังฆาต</option>
+                                            <option value="กวาวเครือขาว">กวาวเครือขาว</option>
+                                            <option value="การบูรฝาง (ฝางเสน)">การบูรฝาง (ฝางเสน)</option>
+                                            <option value="ว่านดอกทอง (ว่านรากราคะ)">ว่านดอกทอง (ว่านรากราคะ)</option>
+                                            <option value="โสมเกาหลี">โสมเกาหลี</option>
+                                        </optgroup>
+                                    </select>
+                                    <strong id="w4review"></strong>
+                                    <!-- <p></p>
+                                    <span
+                                        class="badge badge-light text-danger fk-14">*หากไม่พบชื่อพืชที่ต้องการกรุณากรอกเพิ่ม</span>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="newitem_herb_plant_list"
+                                            placeholder="กรอกชื่อพืชเข้าในตัวเลือก">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-info" type="button"
+                                                onclick="addHerbList()">เพิ่มตัวเลือก</button>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="form-check col-sm">
+                                <input class="form-check-input" type="checkbox" id="checkOther">
+                                <label class="form-check-label" for="inlineCheckbox2">อื่นๆ</label>
+                                <div class="d-flex flex-column disabledbox" id="boxOther">
+                                    <select class="form-control" multiple id="Other_plant_list"></select>
+                                    <p></p>
+                                    <span
+                                        class="badge badge-light text-danger fk-14">*หากไม่พบชื่อพืชที่ต้องการกรุณากรอกเพิ่ม</span>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="newitem_Other_plant_list"
+                                            placeholder="กรอกชื่อพืชเข้าในตัวเลือก">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-info" type="button"
+                                                onclick="addOtherList()">เพิ่มตัวเลือก</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-3">
+                        <h6 class="text-center">อัพโหลดรูปภาพแปลงป่าครอบครัว</h6>
+                        <hr>
+                        <div class="row">
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพแปลงป่าครอบครัว 1</label>
+                                <input type="file" class="form-control-file" id="imgfile" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview" width="50%">
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพแปลงป่าครอบครัว 2</label>
+                                <input type="file" class="form-control-file" id="imgfile2" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview2" width="50%">
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพแปลงป่าครอบครัว 3</label>
+                                <input type="file" class="form-control-file" id="imgfile3" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview3" width="50%">
+                            </div>
+                            <div class="form-group col-sm">
+                                <label for="img">รูปภาพแปลงป่าครอบครัว 4</label>
+                                <input type="file" class="form-control-file" id="imgfile4" accept="image/*">
+                                <p></p>
+                                <img src="" id="preview4" width="50%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card p-4 d-flex flex-column mb-4">
+                    <div class="container-fluid">
+                        <div class="form-group">
+                            <label for="patient">ชื่อเจ้าของแปลง:</label><br>
+                            <input type="text" class="form-control" id="fname" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="patient">หมายเลขแปลง: </label><br>
+                            <label style="font-size: 14px;">เลือกแปลงด้านเพื่อกรอกรายละเอียดการใช้ประโยชน์</label>
+                            <div class="list-group" id="listItem"></div>
+                        </div>
+
+                        <label for="">การนำไปใช้ประโยชน์:</label>
+                        <div class="form-group" id="typeto">
+                            <label for="forest4">ชนิด:</label>
+                            <select class="form-control" id="plantlist"></select>
+                        </div>
+
+                        <input type="hidden" id="ffid">
+                        <input type="hidden" id="fplant">
+                        <input type="hidden" id="ftype">
+
+                        <label for="">รูปแบบการใช้ประโยชน์:</label>
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="d-flex flex-row w-100">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <span style="width: 300px;"><b>วัตถุดิบประกอบอาหาร จำนวน
+                                                :</b></span>
+                                        <input type="number" step="any" class="form-control w-100" id="eat">
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center">
+                                        <span class="text-right w-100 mr-2">หน่วยนับ :</span>
+                                        <select class="form-control" id="eat_unit">
+                                            <option value="กิโลกรัม">กิโลกรัม</option>
+                                            <option value="ต้น">ต้น</option>
+                                            <option value="ต้น">กอ</option>
+                                            <option value="ต้น">ถัง</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <span style="width: 300px;"><b>ยารักษาโรค จำนวน :</b></span>
+                                        <input type="number" step="any" class="form-control w-100" id="herb">
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center">
+                                        <span class="text-right w-100 mr-2" style="left: -50px;">หน่วยนับ :</span>
+                                        <select class="form-control" id="herb_unit">
+                                            <option value="กิโลกรัม">กิโลกรัม</option>
+                                            <option value="ต้น">ต้น</option>
+                                            <option value="ต้น">กอ</option>
+                                            <option value="ต้น">ถัง</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <span style="width: 300px;"><b>ที่อยู่อาศัย/พื้นที่ใช้สอย
+                                                จำนวน :</b></span>
+                                        <input type="number" step="any" class="form-control" id="use">
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center">
+                                        <span class="text-right w-100 mr-2" style="left: -50px;">หน่วยนับ :</span>
+                                        <select class="form-control" id="use_unit">
+                                            <option value="กิโลกรัม">กิโลกรัม</option>
+                                            <option value="ต้น">ต้น</option>
+                                            <option value="ต้น">กอ</option>
+                                            <option value="ต้น">ถัง</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <span style="width: 300px;"><b>แปรรูป/ผลิตภัณฑ์
+                                                จำนวน :</b></span>
+                                        <input type="number" step="any" class="form-control" id="econ">
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center">
+                                        <span class="text-right w-100 mr-2" style="left: -50px;">หน่วยนับ :</span>
+                                        <select class="form-control" id="econ_unit">
+                                            <option value="กิโลกรัม">กิโลกรัม</option>
+                                            <option value="ต้น">ต้น</option>
+                                            <option value="ต้น">กอ</option>
+                                            <option value="ต้น">ถัง</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">วันที่รายงาน:</label><br>
+                            <input type="date" class="form-control" id="dt">
+                        </div>
+                    </div>
+                </div> -->
+                <hr>
+                <div class="d-flex justify-content-center">
+                    <br>
+                    <br>
+                    <br>
+                    <button class="btn btn-success" type="button" id="button" onclick="chkData()"><i
+                            class="bi bi-save"></i>&nbsp;บันทึก</button>&nbsp;&nbsp;
+                </div>
+                <!-- <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-light">กลับไปหน้าหลัก</button>
+                </div> -->
+            </div>
+        </section><!-- End Testimonials Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="background-color: #CACED3;">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright 2021 <strong><span>EnGRIDs by GeoCMU</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: [license-url] -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+                    Designed by <a href="https://engrids.soc.cmu.ac.th">EnGRIDs</a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
+
+    <div class="modal fade" id="chkgeommodal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="w3-animate-top"></div>
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <i class="bi bi-x-square-fill text-danger mr-2"
+                            style="font-size: 26px;"></i>บันทึกข้อมูลไม่สำเร็จ
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <br>
+                    <p style="font-size: 18px;  ">กรุณาวาดแปลงพื้นที่ป่าครอบครัวของท่าน ลงบนแผนที่</p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="confirmModal">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <!-- <div class="w3-animate-top"></div> -->
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <i class="bi bi-file-earmark-check-fill text-success mr-2" style="font-size: 26px;"></i>
+                        ยืนยันการบันทึกข้อมูล
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <br>
+                    <lord-icon src="https://cdn.lordicon.com/biwxmlnf.json" trigger="loop" colors="primary:#b4b4b4"
+                        style="width:65px;height:65px">
+                    </lord-icon>
+                    <p style="font-size: 18px;">ท่านต้องการบันทึกข้อมูลนี้
+                        <!-- <b><span id="projName"></span><br><span id="projTime"></span> 
+                        </b>--> ใช่หรือไม่?
+                    </p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="gotoDashboard()">ยืนยัน</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteModal">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <!-- <div class="w3-animate-top"></div> -->
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        <i class="bi bi-file-earmark-check-fill text-danger mr-2"
+                            style="font-size: 26px;"></i>ยืนยันการลบข้อมูล
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <br>
+                    <p style="font-size: 18px;">ท่านต้องการลบข้อมูล
+                        <b><span id="projName"></span><br><span id="projTime"></span>
+                        </b> ใช่หรือไม่?
+                    </p>
+                    <input type="hidden" id="projId">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="deleteValue()">ยืนยัน</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://cdn.datatables.net/plug-ins/1.11.1/dataRender/datetime.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/spiritedaway.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/moonrisekingdom.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+
+    <!-- Vendor JS Files -->
+    <!-- <script src="./../../assets/vendor/jquery/jquery.min.js"></script> -->
+    <script src="./../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="./../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="./../../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./../../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="./../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="./../../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="./../../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="./../../assets/vendor/typed.js/typed.min.js"></script>
+    <script src="./../../assets/vendor/aos/aos.js"></script>
+    <script src="./../../assets/vendor/aos/aos.js"></script>
+    <!-- Template Main JS File -->
+    <script src="./../../../eac_cmu/main_eac/assets/js/main.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
