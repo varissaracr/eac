@@ -456,5 +456,3 @@ let closeModal = () => {
 
 
 // sendData()
-
-console.log(11222233)
