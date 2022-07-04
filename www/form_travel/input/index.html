@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>แหล่งท่องเที่ยวชุมชน</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="./../assets/img/favicon.png" rel="icon">
+    <link href="./../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- start dooklink -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+
+    <!--line-awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="./../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="./../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <!-- Template Main CSS File -->
+    <link href="./../assets/css/style.css" rel="stylesheet">
+    <link href="./../assets/fontawesome/css/all.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="./../../main_eac/index.html"><i class="fas fa-home"></i>
+                        <span>หน้าหลัก</span></a></li>
+                <li><a href="./../../form_demo/dashboard/index.html"><i class="fas fa-bacon"></i>
+                        <span>ความมั่นทางอาหาร</span></a>
+                </li>
+                <li><a href="./../../db_water/index.html"><i class="fas fa-chart-line"></i>
+                        <span>รายงานข้อมูลน้ำผิวดิน</span></a></li>
+                <li><a href="./../../form_organize/report/index.html"><i class="fas fa-users-cog"></i>
+                        <span>กลุ่มเครือข่าย/องค์กร</span></a></li>
+                <!-- <li><a href="#map_eac"><i class="bx bx-layer"></i> <span>ระบบสารสนเทศภูมิศาสตร์เพื่อชุมชน</span></a> -->
+                <li><a href="./../../dashboard_wms/report/index.html"><i class="fas fa-layer-group"></i>
+                        <span>แผนที่ภาพรวม</span></a></li>
+                </li>
+                <li class="active"><a href="#travel"><i class="fas fa-suitcase"></i>
+                        <span>ท่องเที่ยวชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../form_notify/dashboard/index.html"><i class="fas fa-bullhorn"></i>
+                        <span>แจ้งปัญหาสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"> <i class="fas fa-tree"></i>
+                        <span>ทรัพยากรธรรมชาติและสิ่งแวดล้อม</span></a></li>
+                </li>
+                <li><a href="./../../form_learning/dashboard/index.html"><i class="fas fa-chalkboard-teacher"></i>
+                        <span>การเรียนรู้บนฐานชุมชน</span></a></li>
+                </li>
+                <li><a href="./../../main_eac/index.html"><i class="fas fa-exclamation-circle"></i>
+                        <span>เฝ้าระวังปัญหาผลกระทบจากมลพิษสิ่งแวดล้อม</span></a></li>
+                </li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </header><!-- End Header -->
+
+    <main id="main">
+
+
+        <!-- ======= Testimonials Section ======= -->
+        <section class="section-bg" id="travel">
+            <div class="container">
+                <div class="section-title">
+                    <h2>แหล่งท่องเที่ยวชุมชน</h2>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="form-group card p-4">
+                        <h5 class="mb-0"><b>ที่อยู่/ที่ตั้ง</b></h5>
+                        <hr>
+                        <div id="map"></div><br>
+                        <div class="form-row d-flex align-items-end">
+                            <div class="col-md-3 form-group">
+                                <label>ค่าพิกัด Lat</label>
+                                <input type="text" name="lat" class="form-control" id="lat" placeholder="lat">
+
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label>ค่าพิกัด Lng</label>
+                                <input type="text" class="form-control" name="lng" id="lng" placeholder="lng">
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label>ความแม่นยำ (เมตร)</label>
+                                <input type="text" class="form-control" name="accuracy" id="accuracy"
+                                    placeholder="ความแม่นยำ">
+                            </div>
+                            <div class="col-md-3 ">
+                                <div class="form-group d-flex flex-row justify-content-around">
+                                    <button type="button" class="btn btn-secondary" onclick="markerlocate()">จับตำแหน่ง
+                                        gps</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="stoplocate()">เก็บค่าพิกัด</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label>ชื่อสถานที่ท่องเที่ยว</label>
+                                    <input type="text" class="form-control" id="travel_n">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>ที่อยู่</label>
+                                    <input type="text" class="form-control" id="location">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="sel1">จังหวัด:</label>
+                                    <select class="form-control" id="pro">
+                                        <option value="TH">เลือกจังหวัด</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="sel1">อำเภอ:</label>
+                                    <select class="form-control" id="amp">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="sel1">ตำบล:</label>
+                                    <select class="form-control" id="tam">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <h6><b>ประเภทแหล่งท่องเที่ยว</b></h6>
+
+                        <form id="travel">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <input type="radio" name="radioName" value="ท่องเที่ยวเชิงเกษตร">&nbsp;
+                                    ท่องเที่ยวเชิงเกษตร
+                                </div>
+                                <div class="col-sm">
+                                    <input type="radio" name="radioName" value="ท่องเที่ยวเพื่อการเรียนรู้">&nbsp;
+                                    ท่องเที่ยวเพื่อการเรียนรู้
+                                </div>
+                                <div class="col-sm">
+                                    <input type="radio" name="radioName" value="ท่องเที่ยวเชิงนิเวศ">&nbsp;
+                                    ท่องเที่ยวเชิงนิเวศ
+                                </div>
+                                <div class="col-sm">
+                                    <input type="radio" name="radioName" value="ท่องเที่ยวเชิงศาสนา">&nbsp;
+                                    ท่องเที่ยวเชิงศาสนา
+                                </div>
+                                <div class="col-sm">
+                                    <input type="radio" name="radioName" value="ท่องเที่ยววิถีชุมชน">&nbsp;
+                                    ท่องเที่ยววิถีชุมชน
+                                </div>
+                            </div>
+                        </form>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label><b>รายละเอียด</b></label>
+                                    <textarea class="form-control" rows="4" aria-label="With textarea"
+                                        placeholder="ระบุข้อมูลแหล่งท่องเที่ยว" id="detail"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <label for="Youtube"><i class="bi bi-youtube"></i> Youtube</label>
+                                <input type="text" class="form-control" id="url_yt"
+                                    placeholder="ลิงค์วิดีโอที่เกี่ยวข้อง">
+                            </div>
+                        </div>
+                        <hr>
+                        <h6><label for="img"><b>อัพโหลดรูปภาพแหล่งท่องเที่ยว</b></label></h6>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group text-center">
+                                    <span>รูปภาพที่ 1</span>
+                                    <input type="file" class="form-control-file" id="imgfile1">
+                                    <!-- <img src="" id="preview1" width="250px"> -->
+                                    <div class="image-area mt-4"><img id="preview1" width="250px" src="#" alt=""
+                                            class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group text-center">
+                                    <span>รูปภาพที่ 2</span>
+                                    <input type="file" class="form-control-file" id="imgfile2">
+                                    <div class="image-area mt-4"><img id="preview2" width="250px" src="#" alt=""
+                                            class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group text-center">
+                                    <span>รูปภาพที่ 3</span>
+                                    <input type="file" class="form-control-file" id="imgfile3">
+                                    <div class="image-area mt-4"><img id="preview3" width="250px" src="#" alt=""
+                                            class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group text-center">
+                                    <span>รูปภาพที่ 4</span>
+                                    <input type="file" class="form-control-file" id="imgfile4">
+                                    <div class="image-area mt-4"><img id="preview4" width="250px" src="#" alt=""
+                                            class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group text-center">
+                                    <span>รูปภาพที่ 5</span>
+                                    <input type="file" class="form-control-file" id="imgfile5">
+                                    <div class="image-area mt-4"><img id="preview5" width="250px" src="#" alt=""
+                                            class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group text-center">
+                                    <span>รูปภาพที่ 6</span>
+                                    <input type="file" class="form-control-file" id="imgfile6">
+                                    <div class="image-area mt-4"><img id="preview6" width="250px" src="#" alt=""
+                                            class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="gwdate">วันที่บันทึกข้อมูล</label>
+                                <input type="datetime-local" class="form-control" id="date" required>
+                            </div>
+                            <div class="col-sm">
+                                <label for="record">ผู้ให้ข้อมูล</label>
+                                <input type="text" class="form-control" id="record">
+                            </div>
+                            <div class="col-sm">
+                                <label for="record">กลุ่มผู้ให้ข้อมูล</label>
+                                <select class="form-control" id="typ_commu">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="d-flex justify-content-between flex-row">
+                    <button type="button" class="btn btn-light"
+                        onclick="window.location.href='./../dashboard/index.html';"><i class="fa fa-arrow-left"
+                            aria-hidden="true"></i>&nbsp;
+                        กลับหน้ารายงาน</button>
+                    <button class="btn btn-3bb mr-1" type="button" onclick="savedata()">บันทึกข้อมูล</button>
+                    <button type="button" class="btn btn-light"
+                        onclick="window.location.href='https://engrids.soc.cmu.ac.th/eac_cmu/main_eac/index.html'">
+                        <lord-icon src=" https://cdn.lordicon.com/igpbsrza.json" trigger="hover"
+                            style="width:35px;height:35px">
+                        </lord-icon>
+                    </button>
+                </div>
+                <!-- <div class="row mt-1">
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <div class="circle-icon">
+                                    <i class="icofont-google-map" style="color: #FFFF; font-size: 24px;"></i>
+                                </div>
+                                <h4>ที่อยู่:</h4>
+                                <p>เครือข่ายศูนย์ข้อมูลสารสนเทศชุมชนภาคตะวันออก ตำบล xx อำเภอ xx จังหวัด xx</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="icofont-envelope" style="color: #0563bb; font-size: 24px;"></i>
+                                <h4>Email:</h4>
+                                <p>eac2564@gmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="icofont-phone" style="color: #0563bb; font-size: 24px;"></i>
+                                <h4>หมายเลขโทรศัพท์:</h4>
+                                <p>+ 66 xxx xxx xxx</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="form-row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="ชื่อ-นามสกุลของท่าน" data-rule="minlen:4"
+                                        data-msg="Please enter at least 4 chars" />
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="อีเมล์ของท่าน" data-rule="email"
+                                        data-msg="Please enter a valid email" />
+                                    <div class="validate"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="เรื่องที่ต้องการติดต่อ" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                                    data-msg="Please write something for us"
+                                    placeholder="ข้อความที่ท่านต้องการส่งถึง สชอ."></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="loading">กำลังโหลด</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">ข้อความของท่านได้ถูกส่งมาหาเราเรียบร้อยแล้ว ขอบคุณค่ะ
+                                </div>
+                            </div>
+                            <div class="text-center"><button type="submit">ส่งข้อความ</button></div>
+
+                            <div class="form-group">
+                                <h6><label for="img">อัพโหลดรูปภาพ</label></h6>
+                                <input type="file" class="form-control-file" id="imgfile">
+                                <img src="" id="preview" width="250px">
+                            </div>
+                            <button type="submit" onclick="savedata()">save</button>
+                    </div>
+                    </form>
+
+                </div> -->
+
+            </div>
+            </div>
+        </section><!-- End Testimonials Section -->
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="background-color: #CACED3;">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright 2021 <strong><span>EnGRIDs by GeoCMU</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: [license-url] -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+                    Designed by <a href="https://engrids.soc.cmu.ac.th">EnGRIDs</a>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div class="modal fade bd-example-modal-lg" id="Modalconfirm" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="w3-animate-top">
+                <div class="modal-content">
+                    <div class="modal-header d-flex align-items-center" style="background: #e5e6e5;">
+                        <h4 class="modal-title">
+                            <i class="bi bi-file-earmark-check-fill text-primary mr-2"
+                                style="font-size: 26px;"></i>ยืนยันการบันทึกข้อมูล
+                        </h4>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button> -->
+                    </div>
+                    <div class="modal-body text-center mx-auto">
+                        <p style="font-size: 18px;">ท่านต้องการบันทึกข้อมูลนี้ใช่หรือไม่</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+                        <a href="./../dashboard/index.html" class="btn btn-3bb">ยืนยัน</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+    <div id="preloader"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&amp;version=v2.5"></script> -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v11.0"
+        nonce="gAYMA0dL"></script>
+
+    <!-- Vendor JS Files -->
+    <script src="./../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="./../assets/vendor/php-email-form/validate.js"></script>
+    <script src="./../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./../assets/vendor/counterup/counterup.min.js"></script>
+    <script src="./../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="./../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="./../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="./../assets/vendor/typed.js/typed.min.js"></script>
+    <script src="./../assets/vendor/aos/aos.js"></script>
+
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script> -->
+
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="./../assets/js/main.js"></script>
+    <script type="text/javascript" src="//libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
